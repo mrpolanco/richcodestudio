@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <meta name="description" content="OneLane: Weekly Clarity — pick one lane, take one step a day, then stop. A calm clarity ritual for overwhelmed, avoiding, or directionless weeks.">
+    <meta name="keywords" content="weekly clarity, focus, reduce overwhelm, ADHD focus, decision fatigue, procrastination, avoidance, journaling, weekly ritual, iOS app">
+    <meta name="author" content="Rich Code Studio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="OneLane: Weekly Clarity | Rich Code Studio">
+    <meta property="og:description" content="Pick one lane this week. One prompt, one tool, one commitment per day. Clarity, not hustle.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://richcodestudio.com/apps/onelane/">
+    <meta property="og:image" content="https://richcodestudio.com/apps/onelane/assets/OneLane-icon.png">
+
+    <title>OneLane: Weekly Clarity | Rich Code Studio</title>
+
+    <style>
+        body {
+            background: #14143F;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: rgba(255,255,255,0.92);
+            margin: 0;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem 1rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            transition: opacity 0.2s ease;
+        }
+        .back-link:hover,
+        .back-link:focus {
+            opacity: 0.75;
+            text-decoration: underline;
+        }
+        .back-link:focus {
+            outline: 2px solid rgba(140, 120, 255, 0.85);
+            outline-offset: 2px;
+            border-radius: 10px;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .app-header img {
+            width: 104px;
+            height: 104px;
+            border-radius: 24px;
+            box-shadow: 0 14px 50px rgba(0,0,0,0.35);
+            background: rgba(255,255,255,0.06);
+        }
+        .app-title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin: 0 0 0.35rem 0;
+            letter-spacing: -0.02em;
+        }
+        .app-subtitle {
+            font-size: 1.05rem;
+            margin: 0 0 1.25rem 0;
+            color: rgba(255,255,255,0.72);
+        }
+
+        .store-badge {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            transition: transform 0.25s ease;
+        }
+        .store-badge:hover,
+        .store-badge:focus {
+            transform: scale(1.04);
+        }
+        .store-badge:focus {
+            outline: 2px solid rgba(140, 120, 255, 0.85);
+            outline-offset: 3px;
+            border-radius: 12px;
+        }
+        .store-badge img {
+            height: auto;
+            width: auto;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.06);
+            color: rgba(255,255,255,0.86);
+            font-size: 0.92rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            user-select: none;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 20px;
+            box-shadow: 0 20px 70px rgba(0,0,0,0.30);
+            padding: 2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .section h2 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.7rem;
+            letter-spacing: -0.01em;
+        }
+        .section h3 {
+            margin: 1.75rem 0 0.8rem 0;
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.90);
+        }
+        .muted {
+            color: rgba(255,255,255,0.70);
+        }
+
+        .features-list {
+            margin: 1rem 0 0.75rem 0;
+            padding-left: 1.2rem;
+        }
+        .features-list li {
+            margin-bottom: 0.7rem;
+            color: rgba(255,255,255,0.86);
+        }
+        .features-list strong {
+            color: rgba(255,255,255,0.96);
+        }
+
+        .quote {
+            margin: 1.25rem 0 0.5rem 0;
+            padding: 1.1rem 1.1rem;
+            border-left: 3px solid rgba(140, 120, 255, 0.75);
+            background: rgba(140, 120, 255, 0.08);
+            border-radius: 14px;
+            color: rgba(255,255,255,0.90);
+        }
+
+        .privacy-link {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: rgba(255,255,255,0.85);
+            text-decoration: underline;
+            font-weight: 600;
+            padding: 0.35rem 0;
+            transition: opacity 0.2s ease;
+        }
+        .privacy-link:hover,
+        .privacy-link:focus {
+            opacity: 0.75;
+        }
+        .privacy-link:focus {
+            outline: 2px solid rgba(140, 120, 255, 0.85);
+            outline-offset: 2px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 640px) {
+            .app-header {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .app-header img {
+                width: 88px;
+                height: 88px;
+            }
+            .container {
+                padding: 1rem 0.75rem 2.5rem 0.75rem;
+            }
+            .app-title {
+                font-size: 1.85rem;
+            }
+            .section {
+                padding: 1.5rem;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .store-badge:hover,
+            .store-badge:focus {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<main class="container">
+    <nav aria-label="App navigation">
+        <a href="../" class="back-link" aria-label="Back to apps list">&larr; Back to Apps List</a>
+    </nav>
+
+    <header class="app-header">
+        <img src="assets/OneLane-icon.png" alt="OneLane App Icon">
+        <div>
+            <h1 class="app-title">OneLane: Weekly Clarity</h1>
+            <p class="app-subtitle">Pick one lane this week. One step a day. Then stop.</p>
+
+            <!-- Optional quick positioning tags -->
+            <div aria-label="Positioning tags">
+                <span class="pill">Clarity, not hustle</span>
+                <span class="pill">Reduce overwhelm</span>
+                <span class="pill">One lane per week</span>
+            </div>
+
+            <!-- Replace with your real App Store URL -->
+            <a class="store-badge"
+               href="https://apps.apple.com/us/app/onelane-weekly-clarity/id0000000000"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Download OneLane on the App Store">
+                <img src="assets/available-on-the-app-store_150x50.png" alt="Available on the App Store">
+            </a>
+        </div>
+    </header>
+
+    <section class="section" aria-labelledby="app-description">
+        <h2 id="app-description">You don’t have to fix everything this week.</h2>
+        <p class="muted">
+            OneLane is a weekly clarity ritual for people who are busy, capable — and scattered.
+            Choose one lane. Take one step a day. Let the rest stay quiet.
+        </p>
+
+        <div class="quote" aria-label="OneLane promise">
+            <strong>Pick one thing. Move it forward. That’s enough.</strong>
+        </div>
+
+        <h3>What it does</h3>
+        <ul class="features-list">
+            <li><strong>One lane per week:</strong> Choose the one area that needs attention right now.</li>
+            <li><strong>One prompt per day:</strong> A sharp question that cuts through the noise.</li>
+            <li><strong>One short tool:</strong> Reset, Clarity, or Commit — matched to how you’re stuck.</li>
+            <li><strong>One concrete move:</strong> You name it, lock it in, and close the loop.</li>
+            <li><strong>A calm finish:</strong> “You moved your lane forward. That’s enough for today.”</li>
+        </ul>
+
+        <h3>Built for real life</h3>
+        <ul class="features-list">
+            <li><strong>No streak pressure.</strong> No guilt loops.</li>
+            <li><strong>No productivity overload.</strong> No 12 competing goals.</li>
+            <li><strong>Designed for decision fatigue:</strong> one thing, one step, done.</li>
+        </ul>
+
+        <h3>Who it’s for</h3>
+        <ul class="features-list">
+            <li>High-achievers who feel spread too thin</li>
+            <li>Founders carrying too much alone</li>
+            <li>Adults with ADHD who overcommit</li>
+            <li>Professionals stuck in decision fatigue</li>
+            <li>Anyone busy but directionless</li>
+        </ul>
+
+        <h3>How it works</h3>
+        <ul class="features-list">
+            <li><strong>Start your week in one tap:</strong> choose your lane and what “a win” looks like.</li>
+            <li><strong>Each day:</strong> one prompt → one tool → one small move.</li>
+            <li><strong>End of day:</strong> did you move your lane forward? yes or no. that’s it.</li>
+        </ul>
+
+        <p class="muted">
+            OneLane includes an optional subscription for ongoing weekly clarity support and adaptive prompts.
+        </p>
+        <p class="muted">
+            No ads. No data selling. Just structure.
+        </p>
+    </section>
+
+    <section class="section" aria-labelledby="privacy-and-support">
+        <h2 id="privacy-and-support">Privacy & Support</h2>
+        <p class="muted">
+            Your clarity is personal. We keep the experience calm, minimal, and respectful.
+        </p>
+
+        <!-- Update these to your actual paths -->
+        <a class="privacy-link" href="privacy-policy/" aria-label="View app privacy policy">App Privacy Policy</a>
+        <br>
+        <a class="privacy-link" href="support/" aria-label="Get app support">App Support</a>
+    </section>
+
+    <footer class="muted" style="padding: 0.5rem 0 0 0;">
+        © <span id="year"></span> Rich Code Studio
+    </footer>
+</main>
+
+<script>
+    // Small nicety — safe, no tracking.
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
