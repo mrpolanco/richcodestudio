@@ -1,0 +1,349 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support for OneLane: Weekly Clarity — FAQs, troubleshooting, subscription help, and contact information.">
+    <meta name="keywords" content="OneLane support, weekly clarity, help, FAQ, troubleshooting, subscription, iCloud, AI coach">
+    <meta name="author" content="Rich Code Studio">
+
+    <meta property="og:title" content="Support - OneLane: Weekly Clarity">
+    <meta property="og:description" content="Get help with OneLane. FAQs, troubleshooting, subscription help, and contact support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://richcodestudio.com/apps/onelane/support/">
+    <meta property="og:image" content="https://richcodestudio.com/apps/onelane/assets/icon.png">
+
+    <title>Support - OneLane: Weekly Clarity | Rich Code Studio</title>
+
+    <style>
+        body {
+            background: #14143F;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: rgba(255,255,255,0.92);
+            margin: 0;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem 1rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            transition: opacity 0.2s ease;
+        }
+        .back-link:hover,
+        .back-link:focus {
+            opacity: 0.75;
+            text-decoration: underline;
+        }
+        .back-link:focus {
+            outline: 2px solid rgba(140, 120, 255, 0.85);
+            outline-offset: 2px;
+            border-radius: 10px;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .app-header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            box-shadow: 0 14px 50px rgba(0,0,0,0.35);
+            background: rgba(255,255,255,0.06);
+        }
+        .app-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 0 0.25rem 0;
+            letter-spacing: -0.02em;
+        }
+        .app-subtitle {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.72);
+            margin: 0;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 20px;
+            box-shadow: 0 20px 70px rgba(0,0,0,0.30);
+            padding: 2rem;
+            margin-bottom: 1.6rem;
+        }
+        .section h2 {
+            color: rgba(255,255,255,0.95);
+            margin-top: 0;
+            font-size: 1.6rem;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+            padding-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+        .section h3 {
+            color: rgba(255,255,255,0.92);
+            font-size: 1.2rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.1rem;
+            padding: 1rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.10);
+        }
+        .faq-question {
+            font-weight: 700;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 0.4rem;
+        }
+        .faq-answer {
+            color: rgba(255,255,255,0.78);
+        }
+        .faq-answer code {
+            font-family: ui-monospace, monospace;
+            font-size: 0.92em;
+            background: rgba(255,255,255,0.08);
+            padding: 0.15em 0.4em;
+            border-radius: 6px;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 1.25rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            color: rgba(255,255,255,0.85);
+        }
+        a {
+            color: rgba(140, 120, 255, 0.95);
+            text-decoration: underline;
+            transition: opacity 0.2s ease;
+        }
+        a:hover,
+        a:focus { opacity: 0.8; }
+        a:focus {
+            outline: 2px solid rgba(140, 120, 255, 0.85);
+            outline-offset: 2px;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            background: rgba(140, 120, 255, 0.12);
+            border: 1px solid rgba(140, 120, 255, 0.25);
+            color: rgba(255,255,255,0.92);
+            padding: 2rem;
+            border-radius: 18px;
+            text-align: left;
+        }
+        .contact-info h2 {
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+        .contact-info a {
+            color: rgba(255,255,255,0.95);
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        .pill-row {
+            margin-top: 0.75rem;
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.06);
+            color: rgba(255,255,255,0.86);
+            font-size: 0.92rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            user-select: none;
+        }
+
+        @media (max-width: 600px) {
+            .app-header {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .app-header img {
+                width: 64px;
+                height: 64px;
+            }
+            .container {
+                padding: 1rem 0.75rem 2.5rem 0.75rem;
+            }
+            .app-title {
+                font-size: 1.6rem;
+            }
+            .section {
+                padding: 1.5rem;
+            }
+            .section h2 {
+                font-size: 1.35rem;
+            }
+            .section h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<main class="container">
+    <nav aria-label="Navigation">
+        <a href="../" class="back-link" aria-label="Back to app details">&larr; Back to App Details</a>
+    </nav>
+
+    <header class="app-header">
+
+        <img src="../assets/OneLane-icon.png" alt="OneLane app icon">
+        <div>
+            <h1 class="app-title">Support Center</h1>
+            <p class="app-subtitle">Get help with OneLane: Weekly Clarity</p>
+            <div class="pill-row" aria-label="Support topics">
+                <span class="pill">Onboarding</span>
+                <span class="pill">AI Coach</span>
+                <span class="pill">Subscriptions</span>
+                <span class="pill">iCloud</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" aria-labelledby="faq">
+        <h2 id="faq">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I choose a lane?</div>
+            <div class="faq-answer">
+                Choose the area that feels most unresolved right now. If nothing stands out, choose the one you’ve been avoiding.
+                You can change lanes next week (or anytime from Settings).
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do I need an account?</div>
+            <div class="faq-answer">
+                No. You can use OneLane without creating an account. Your data is stored on your device and can be backed up via your iCloud account if enabled.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is my journal private?</div>
+            <div class="faq-answer">
+                Your journal entries and lane notes are stored on your device and, if iCloud is enabled, in your iCloud account. OneLane does not operate servers for storing your journal data.
+                AI coaching only sends the messages you type (and session context) for processing. See the Privacy Policy for details.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What does “That’s enough for today” mean?</div>
+            <div class="faq-answer">
+                OneLane is designed to reduce overwhelm. When you complete your one step, the app intentionally ends the loop so you can stop instead of spiraling into more tasks.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I change my lane?</div>
+            <div class="faq-answer">
+                Open OneLane → Settings → Change Lane. On your weekly reset day, you can also choose to keep your lane or shift.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What is AI Coach and what gets sent?</div>
+            <div class="faq-answer">
+                AI Coach is an optional feature that responds to what you type. Messages are sent through a stateless proxy endpoint to OpenAI to generate a reply.
+                We do not send your name, email, Apple ID, device ID, or journal history. Details are in the <a href="../privacy-policy/">Privacy Policy</a>.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I configure a private LLM (e.g. LM Studio)?</div>
+            <div class="faq-answer">
+                In OneLane, open <strong>Configure LM Studio</strong> and set: <strong>Base URL</strong> to your LM Studio server (e.g. <code>http://192.168.1.21:1234</code> — use your computer’s IP and the port LM Studio uses); <strong>Timeout</strong> (increase if the model responds slowly); <strong>Context Limit</strong> (lower if you see slowdowns or memory errors); and <strong>Model</strong> (tap Refresh Models if the list is empty). Use <strong>Test Connection</strong> to verify, then turn on <strong>Enable this service</strong>. On your computer, start the LM Studio server and enable “Serve on Local Network” if you’re on Wi‑Fi; for port, auth, and CORS, see <a href="https://lmstudio.ai/docs/developer/core/server/settings" target="_blank" rel="noopener noreferrer" aria-label="LM Studio server settings documentation">LM Studio Server Settings</a>.
+            </div>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="troubleshooting">
+        <h2 id="troubleshooting">Troubleshooting</h2>
+
+        <h3>Prompts look generic</h3>
+        <p>If your prompts feel off:</p>
+        <ul>
+            <li>Make sure your weekly win is specific (one sentence is best).</li>
+            <li>Try switching your “posture” (Overwhelmed / Avoiding / Directionless) during your weekly reset.</li>
+            <li>Update to the latest version of OneLane.</li>
+        </ul>
+
+        <h3>AI Coach isn’t responding</h3>
+        <p>Try these steps:</p>
+        <ul>
+            <li>If using a cloud provider: check your internet connection and try again in a minute.</li>
+            <li>If using LM Studio: in <strong>Configure LM Studio</strong>, tap <strong>Test Connection</strong>; ensure <strong>Base URL</strong> matches your LM Studio server (same Wi‑Fi, correct IP and port), a model is loaded in LM Studio, and <strong>Enable this service</strong> is on.</li>
+            <li>Force close and reopen the app.</li>
+        </ul>
+
+        <h3>My subscription isn’t recognized</h3>
+        <p>Try these steps:</p>
+        <ul>
+            <li>Open OneLane → Settings → Restore Purchases.</li>
+            <li>Confirm you’re signed into the correct Apple ID on your device.</li>
+            <li>Wait a few minutes after purchase (Apple can take a moment to sync).</li>
+        </ul>
+
+        <h3>iCloud sync issues</h3>
+        <p>If your data isn’t appearing across devices:</p>
+        <ul>
+            <li>Ensure you’re signed into the same Apple ID on both devices.</li>
+            <li>Enable iCloud for OneLane in iOS Settings → Apple ID → iCloud.</li>
+            <li>Give iCloud a few minutes to sync, then reopen the app.</li>
+        </ul>
+    </section>
+
+    <section class="section" aria-labelledby="privacy-links">
+        <h2 id="privacy-links">Privacy & Terms</h2>
+        <ul>
+            <li><a href="../privacy-policy/" aria-label="View OneLane privacy policy">Privacy Policy</a></li>
+            <li><a href="../terms-conditions/" aria-label="View OneLane terms of use">Terms of Use</a></li>
+        </ul>
+    </section>
+
+    <section class="section contact-info" aria-labelledby="contact">
+        <h2 id="contact">Need More Help?</h2>
+        <p>If you couldn’t find the answer you’re looking for, email support and we’ll help.</p>
+
+        <h3>Contact Support</h3>
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:support@richcodestudio.com" aria-label="Send email to support@richcodestudio.com">support@richcodestudio.com</a><br>
+            <strong>Typical response time:</strong> within 1–2 business days
+        </p>
+
+        <p class="muted">
+            Please include: your device model, iOS version, what you expected to happen, and what actually happened.
+            Screenshots help.
+        </p>
+    </section>
+</main>
+</body>
+</html>
+```
