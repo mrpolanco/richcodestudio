@@ -174,11 +174,13 @@
 
             <h2>2. AI Coaching (Optional)</h2>
             <p>
-                OneLane includes an optional AI coaching feature. When you use AI coaching, the text you type is sent to a stateless proxy endpoint
+                OneLane includes an optional AI coaching feature. By default, when you use AI coaching, your text is sent to a stateless proxy endpoint
                 hosted on <strong>Supabase Edge Functions</strong>, which forwards your request to <strong>OpenAI</strong> to generate a response.
+                Alternatively, you can enable <strong>Privacy Mode</strong> in Settings to route AI requests to a local LLM server (such as LM Studio)
+                running on your own device or network — in this case, no data leaves your device.
             </p>
 
-            <h3>What is sent</h3>
+            <h3>What is sent (cloud mode)</h3>
             <ul>
                 <li><strong>Your coaching message</strong> (whatever you type).</li>
                 <li><strong>Conversation context</strong> needed to respond within that session (recent messages in the same chat).</li>
@@ -188,38 +190,49 @@
             <h3>What is not sent</h3>
             <ul>
                 <li><strong>Your name, email address, Apple ID, or device identifiers</strong>.</li>
-                <li><strong>Your journal entries / Lane Notes history</strong>.</li>
+                <li><strong>Your full Lane Notes history</strong>. (If you enable personalization, short excerpts from up to 3 recent notes may be included
+                    in AI prompts to improve prompt relevance — see Personalization below.)</li>
                 <li><strong>Contacts, photos, files, or other device content</strong>.</li>
             </ul>
 
+            <h3>Personalization (Optional)</h3>
             <p>
-                We do not store AI coaching conversation content on our servers. Supabase’s hosting infrastructure may generate operational logs
+                You may optionally enable prompt personalization in Settings (Privacy &amp; AI). When enabled, excerpts from up to 3 recent Lane Notes
+                (up to 500 characters each, from the last 7 days) may be included in AI coaching prompts to tailor responses to your current focus.
+            </p>
+            <ul>
+                <li>Personalization is <strong>opt-in</strong> — it is off by default and requires your explicit consent.</li>
+                <li>You can disable it at any time in Settings &rarr; Privacy &amp; AI.</li>
+                <li>If you use <strong>Privacy Mode</strong> (local LLM), personalization data never leaves your device regardless of this setting.</li>
+            </ul>
+
+            <p>
+                We do not store AI coaching conversation content on our servers. Supabase's hosting infrastructure may generate operational logs
                 (for example, timestamps, status codes, and error logs). We aim to minimize operational logging and we do not use logs for tracking,
                 advertising, or profiling.
             </p>
             <p class="muted">
-                OpenAI processes the text you send to produce a response. OpenAI’s policies govern how they handle API data.
+                OpenAI processes the text you send to produce a response. OpenAI's policies govern how they handle API data.
+                If you use Privacy Mode (local LLM), no third-party AI service is involved.
             </p>
 
-            <h2>3. Sign in with Apple (Optional)</h2>
-            <p>
-                OneLane does not require account creation. If you choose to use Sign in with Apple, OneLane stores a local identifier on your device
-                to recognize returning users on the same device. OneLane does not create or maintain server-side user accounts for this identifier.
-            </p>
-
-            <h2>4. Purchases (Apple StoreKit)</h2>
+            <h2>3. Purchases (Apple StoreKit)</h2>
             <p>
                 Subscriptions and payments are processed by Apple through StoreKit. We do not receive your full payment information. Apple may provide
                 us with receipt information required to validate your subscription status.
             </p>
 
-            <h2>5. Diagnostics</h2>
+            <h2>4. Diagnostics and Analytics</h2>
             <p>
                 Apple may collect crash and performance diagnostics depending on your device settings. We may use these signals to improve stability and
                 performance. We do not use diagnostics for advertising.
             </p>
+            <p>
+                OneLane also records anonymous usage events (for example, which features are used) stored locally on your device.
+                These are not tied to your identity and are not sent to external servers.
+            </p>
 
-            <h2>6. Third-Party Services</h2>
+            <h2>5. Third-Party Services</h2>
             <p>OneLane may involve the following third parties:</p>
             <ul>
                 <li>
@@ -227,7 +240,8 @@
                     <span class="muted">Apple privacy policy applies.</span>
                 </li>
                 <li>
-                    <strong>Supabase</strong> — hosts the serverless proxy endpoint (Edge Functions) that forwards AI coaching requests.
+                    <strong>Supabase</strong> — hosts the serverless proxy endpoint (Edge Functions) that forwards AI coaching requests to OpenAI.
+                    No user data is stored by this endpoint.
                     <span class="muted">Supabase privacy policy applies.</span>
                     <br>
                     <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="View Supabase privacy policy">https://supabase.com/privacy</a>
@@ -242,41 +256,45 @@
                     <strong>Apple StoreKit</strong> — subscription management and purchase processing.
                 </li>
             </ul>
+            <p class="muted">
+                If you use <strong>Privacy Mode</strong> (local LLM via LM Studio), no third-party AI service is involved — all AI processing
+                happens on your device or local network.
+            </p>
 
-            <h2>7. No Tracking / No Data Selling</h2>
+            <h2>6. No Tracking / No Data Selling</h2>
             <ul>
                 <li><strong>We do not sell your personal data.</strong></li>
                 <li><strong>We do not track you across other companies’ apps or websites.</strong></li>
                 <li><strong>We do not use third-party advertising SDKs.</strong></li>
             </ul>
 
-            <h2>8. Data Deletion</h2>
+            <h2>7. Data Deletion</h2>
             <ul>
                 <li>
-                    <strong>Delete in-app:</strong> You can delete your OneLane data from within the app (Settings → Delete Data).
-                    This removes local data on your device.
+                    <strong>Delete in-app:</strong> You can delete all OneLane data from within the app (Settings &rarr; Delete All App Data).
+                    This removes all local data on your device and returns you to the welcome screen.
                 </li>
                 <li>
                     <strong>iCloud:</strong> If iCloud is enabled for OneLane, Apple may retain backups/synced copies in your iCloud account.
-                    You can manage iCloud storage and app data in your device’s iCloud settings.
+                    You can manage iCloud storage and app data in your device's iCloud settings.
                 </li>
                 <li>
-                    <strong>AI coaching messages:</strong> We do not store conversation content on our servers. Requests are processed by OpenAI via the
-                    proxy endpoint, and OpenAI’s policies apply to processing.
+                    <strong>AI coaching messages:</strong> We do not store conversation content on our servers. Requests are processed by your
+                    configured AI provider and are not stored by OneLane on any server.
                 </li>
             </ul>
 
-            <h2>9. Children’s Privacy</h2>
+            <h2>8. Children's Privacy</h2>
             <p>
                 OneLane is not intended for children under 13. We do not knowingly collect personal information from children under 13.
             </p>
 
-            <h2>10. Changes to This Policy</h2>
+            <h2>9. Changes to This Policy</h2>
             <p>
                 We may update this policy from time to time. We will post the updated policy on this page and update the “Last updated” date.
             </p>
 
-            <h2>11. Contact</h2>
+            <h2>10. Contact</h2>
             <p>
                 If you have questions about privacy, contact us at:<br>
                 <strong>Email:</strong>
