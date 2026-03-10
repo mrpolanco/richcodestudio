@@ -224,7 +224,7 @@
             <p class="app-subtitle">Get help with OneLane: Weekly Clarity</p>
             <div class="pill-row" aria-label="Support topics">
                 <span class="pill">Onboarding</span>
-                <span class="pill">AI Coach</span>
+                <span class="pill">AI Personalization</span>
                 <span class="pill">Subscriptions</span>
                 <span class="pill">iCloud</span>
             </div>
@@ -253,7 +253,7 @@
             <div class="faq-question">Is my journal private?</div>
             <div class="faq-answer">
                 Your journal entries and lane notes are stored on your device and, if iCloud is enabled, in your iCloud account. OneLane does not operate servers for storing your journal data.
-                AI coaching only sends the messages you type (and session context) for processing. See the Privacy Policy for details.
+                If you opt into AI personalization, only limited recent Lane Notes context is sent for processing. See the Privacy Policy for details.
             </div>
         </div>
 
@@ -272,10 +272,11 @@
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">What is AI Coach and what gets sent?</div>
+            <div class="faq-question">What is AI personalization and what gets sent?</div>
             <div class="faq-answer">
-                AI Coach is an optional feature that responds to what you type. Messages are sent through a stateless proxy endpoint to OpenAI to generate a reply.
-                We do not send your name, email, Apple ID, device ID, or journal history. Details are in the <a href="../privacy-policy/index.html">Privacy Policy</a>.
+                AI personalization is optional and off by default. If you turn it on, OneLane may send a rolling 3-day summary of your recent Lane Notes
+                to OpenAI through a stateless proxy endpoint so future prompts and commitments feel more relevant.
+                We do not send your name, email, Apple ID, device ID, or your full journal history. Details are in the <a href="../privacy-policy/index.html">Privacy Policy</a>.
             </div>
         </div>
 
@@ -298,10 +299,11 @@
             <li>Update to the latest version of OneLane.</li>
         </ul>
 
-        <h3>AI Coach isn’t responding</h3>
+        <h3>Adaptive prompts are not updating</h3>
         <p>Try these steps:</p>
         <ul>
-            <li>If using a cloud provider: check your internet connection and try again in a minute.</li>
+            <li>Check your internet connection and try again in a minute if you use cloud AI features.</li>
+            <li>Make sure optional personalization is enabled only if you want adaptive prompts based on recent Lane Notes.</li>
             <li>If using LM Studio: in <strong>Configure LM Studio</strong>, tap <strong>Test Connection</strong>; ensure <strong>Base URL</strong> matches your LM Studio server (same Wi‑Fi, correct IP and port), a model is loaded in LM Studio, and <strong>Enable this service</strong> is on.</li>
             <li>Force close and reopen the app.</li>
         </ul>
@@ -350,4 +352,3 @@
 </main>
 </body>
 </html>
-```

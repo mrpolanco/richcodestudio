@@ -159,7 +159,7 @@
             <div class="note">
                 <strong>Plain-English summary:</strong> We do not operate servers for your personal app data. Your journal entries,
                 lane selections, and preferences are stored on your device and, if iCloud is enabled, in your iCloud account managed by Apple.
-                The only time text is sent to a third party is when you use the optional AI coaching feature.
+                The only time text is sent to a third party is when you enable optional AI-powered personalization or other cloud AI features.
             </div>
 
             <h2>1. Data Storage: On-Device + iCloud (Your Account)</h2>
@@ -172,47 +172,47 @@
                 <li><strong>We do not operate our own servers</strong> for storing your journal content or personal app data.</li>
             </ul>
 
-            <h2>2. AI Coaching (Optional)</h2>
+            <h2>2. AI-Powered Personalization and Cloud AI Features (Optional)</h2>
             <p>
-                OneLane includes an optional AI coaching feature. By default, when you use AI coaching, your text is sent to a stateless proxy endpoint
-                hosted on <strong>Supabase Edge Functions</strong>, which forwards your request to <strong>OpenAI</strong> to generate a response.
+                OneLane includes optional AI-powered features. When cloud AI is used, relevant text is sent to a stateless proxy endpoint
+                hosted on <strong>Supabase Edge Functions</strong>, which forwards your request to <strong>OpenAI</strong> for processing.
                 Alternatively, you can enable <strong>Privacy Mode</strong> in Settings to route AI requests to a local LLM server (such as LM Studio)
                 running on your own device or network — in this case, no data leaves your device.
             </p>
 
             <h3>What is sent (cloud mode)</h3>
             <ul>
-                <li><strong>Your coaching message</strong> (whatever you type).</li>
-                <li><strong>Conversation context</strong> needed to respond within that session (recent messages in the same chat).</li>
-                <li><strong>Non-identifying app context</strong> (for example, your current lane/posture, if used to shape the response).</li>
+                <li><strong>Lane Notes snippets used for prompt personalization</strong> when you explicitly enable personalization.</li>
+                <li><strong>Limited prompt context</strong> needed to generate adaptive prompts or related cloud AI output.</li>
+                <li><strong>Non-identifying app context</strong> such as your current lane or posture, if used to shape the output.</li>
             </ul>
 
             <h3>What is not sent</h3>
             <ul>
                 <li><strong>Your name, email address, Apple ID, or device identifiers</strong>.</li>
-                <li><strong>Your full Lane Notes history</strong>. (If you enable personalization, a rolling 3-day summary of your notes may be included
-                    in AI prompts to improve prompt relevance — see Personalization below.)</li>
+                <li><strong>Your full Lane Notes history</strong>. If you enable personalization, only a rolling 3-day summary may be included
+                    in AI prompts to improve relevance — see Personalization below.</li>
                 <li><strong>Contacts, photos, files, or other device content</strong>.</li>
             </ul>
 
             <h3>Personalization (Optional)</h3>
             <p>
-                You may optionally enable prompt personalization in Settings (Privacy &amp; AI). When enabled, a rolling summary of your last 3 days of Lane Notes
-                (up to 500 characters per day, from the last 7 days) may be included in AI coaching prompts to tailor responses to your current focus.
+                You may optionally enable prompt personalization in Settings. When enabled, a rolling summary of your last 3 days of Lane Notes
+                (up to 500 characters per day, selected from the last 7 days) may be included in cloud AI prompts to tailor future prompts and commitments to your current focus.
             </p>
             <ul>
                 <li>Personalization is <strong>opt-in</strong> — it is off by default and requires your explicit consent.</li>
-                <li>You can disable it at any time in Settings &rarr; Privacy &amp; AI.</li>
+                <li>You can disable it at any time in Settings.</li>
                 <li>If you use <strong>Privacy Mode</strong> (local LLM), personalization data never leaves your device regardless of this setting.</li>
             </ul>
 
             <p>
-                We do not store AI coaching conversation content on our servers. Supabase's hosting infrastructure may generate operational logs
+                We do not store personalized prompt content on our servers. Supabase's hosting infrastructure may generate operational logs
                 (for example, timestamps, status codes, and error logs). We aim to minimize operational logging and we do not use logs for tracking,
                 advertising, or profiling.
             </p>
             <p class="muted">
-                OpenAI processes the text you send to produce a response. OpenAI's policies govern how they handle API data.
+                OpenAI processes the limited text sent for cloud AI features. OpenAI's policies govern how they handle API data.
                 If you use Privacy Mode (local LLM), no third-party AI service is involved.
             </p>
 
@@ -240,14 +240,14 @@
                     <span class="muted">Apple privacy policy applies.</span>
                 </li>
                 <li>
-                    <strong>Supabase</strong> — hosts the serverless proxy endpoint (Edge Functions) that forwards AI coaching requests to OpenAI.
+                    <strong>Supabase</strong> — hosts the serverless proxy endpoint (Edge Functions) that forwards cloud AI requests to OpenAI.
                     No user data is stored by this endpoint.
                     <span class="muted">Supabase privacy policy applies.</span>
                     <br>
                     <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="View Supabase privacy policy">https://supabase.com/privacy</a>
                 </li>
                 <li>
-                    <strong>OpenAI</strong> — processes AI coaching messages and returns generated responses.
+                    <strong>OpenAI</strong> — processes limited prompt and personalization text for OneLane's optional cloud AI features.
                     <span class="muted">OpenAI privacy policy applies.</span>
                     <br>
                     <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" aria-label="View OpenAI privacy policy">https://openai.com/policies/privacy-policy</a>
@@ -279,7 +279,7 @@
                     You can manage iCloud storage and app data in your device's iCloud settings.
                 </li>
                 <li>
-                    <strong>AI coaching messages:</strong> We do not store conversation content on our servers. Requests are processed by your
+                    <strong>Cloud AI requests:</strong> We do not store personalized prompt content on our servers. Requests are processed by your
                     configured AI provider and are not stored by OneLane on any server.
                 </li>
             </ul>
