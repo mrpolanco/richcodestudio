@@ -4,228 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://richcodestudio.com/apps/himnario-celebremos/">
-    <meta name="description" content="Himnario Celebremos - Himnos Cristianos. Tu himnario digital completo con letras y música cristiana. Descarga gratis en el App Store.">
-    <meta name="keywords" content="himnario, himnos cristianos, música cristiana, adoración, iglesia, app iOS">
+    <meta name="description" content="Himnario Celebremos es un himnario cristiano digital para iglesias, ministerios de alabanza y familias, con letras, favoritos y búsqueda rápida.">
+    <meta name="keywords" content="Himnario Celebremos, himnario cristiano, app de himnos, letras de himnos, adoración, iglesia, app iPhone">
     <meta name="author" content="Rich Code Studio">
-    <meta property="og:title" content="Himnario Celebremos - Himnos Cristianos">
-    <meta property="og:description" content="Tu himnario digital completo con letras y música cristiana">
+    <meta property="og:title" content="Himnario Celebremos | Himnario Cristiano Digital">
+    <meta property="og:description" content="Un himnario cristiano digital para iglesias, familias y equipos de alabanza que quieren tener los himnos siempre a mano.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://richcodestudio.com/apps/himnario-celebremos/">
     <meta property="og:image" content="https://richcodestudio.com/apps/himnario-celebremos/assets/icon.png">
     <meta property="og:site_name" content="Rich Code Studio">
     <meta property="og:locale" content="es_ES">
     <meta property="og:locale:alternate" content="en_US">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Himnario Celebremos - Himnos Cristianos | Rich Code Studio">
-    <meta name="twitter:description" content="Tu himnario digital completo con letras y música cristiana">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Himnario Celebremos | Himnario Cristiano Digital">
+    <meta name="twitter:description" content="Un himnario cristiano digital para iglesias, familias y equipos de alabanza que quieren tener los himnos siempre a mano.">
     <meta name="twitter:image" content="https://richcodestudio.com/apps/himnario-celebremos/assets/icon.png">
-    <title>Himnario Celebremos - Himnos Cristianos | Rich Code Studio</title>
+    <title>Himnario Celebremos | Himnario Cristiano Digital</title>
     <style>
-        body {
-            background: #BAAED5;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: #222;
-            margin: 0;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 2rem 1rem 4rem 1rem;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            color: #764ba2;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 0;
-            transition: color 0.3s ease;
-        }
-        .back-link:hover,
-        .back-link:focus {
-            color: #5a4e6d;
-            text-decoration: underline;
-        }
-        .back-link:focus {
-            outline: 2px solid #764ba2;
-            outline-offset: 2px;
-        }
-        .app-header {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .app-header img {
-            width: 100px;
-            height: 100px;
-            border-radius: 24px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-            background: white;
-            alt: "Icono de la aplicación Himnario Celebremos";
-        }
-        .app-title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #333;
-            margin-bottom: 0.3rem;
-        }
-        .app-subtitle {
-            font-size: 1.1rem;
-            color: #5a4e6d;
-            margin-bottom: 1.5rem;
-        }
-        .store-badge {
-            display: inline-block;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
-        }
-        .store-badge:hover,
-        .store-badge:focus {
-            transform: scale(1.05);
-        }
-        .store-badge:focus {
-            outline: 2px solid #764ba2;
-            outline-offset: 2px;
-        }
-        .store-badge img {
-            height: auto;
-            width: auto;
-            border-radius: 0;
-            alt: "Disponible en el App Store";
-        }
-        .section {
-            background: white;
-            border-radius: 18px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        .section h2 {
-            color: #764ba2;
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-        .section h3 {
-            color: #764ba2;
-            font-size: 1.4rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .features-list {
-            margin: 1.5rem 0 1rem 0;
-            padding-left: 1.2rem;
-        }
-        .features-list li {
-            margin-bottom: 0.7rem;
-        }
-        .privacy-link {
-            display: inline-block;
-            margin-top: 1.5rem;
-            color: #764ba2;
-            text-decoration: underline;
-            font-weight: 600;
-            padding: 0.5rem 0;
-            transition: color 0.3s ease;
-        }
-        .privacy-link:hover,
-        .privacy-link:focus {
-            color: #5a4e6d;
-        }
-        .privacy-link:focus {
-            outline: 2px solid #764ba2;
-            outline-offset: 2px;
-        }
-        @media (max-width: 600px) {
-            .app-header {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: center;
-            }
-            .app-header img {
-                width: 80px;
-                height: 80px;
-            }
-            .container {
-                padding: 1rem 0.5rem 2rem 0.5rem;
-            }
-            .app-title {
-                font-size: 1.8rem;
-            }
-            .section {
-                padding: 1.5rem;
-            }
-            .section h2 {
-                font-size: 1.5rem;
-            }
-            .section h3 {
-                font-size: 1.2rem;
-            }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .store-badge:hover,
-            .store-badge:focus {
-                transform: none;
-            }
-        }
+        body { background:#f0e7fb; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color:#2c2240; margin:0; min-height:100vh; line-height:1.6; }
+        .container{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem;} .back-link,.privacy-link{display:inline-block;color:#6a4ba2;text-decoration:none;font-weight:600;} .back-link{margin-bottom:1.5rem;padding:0.5rem 0;} .back-link:hover,.back-link:focus,.privacy-link:hover,.privacy-link:focus{color:#4f3b77;text-decoration:underline;} .back-link:focus,.privacy-link:focus,.store-badge:focus{outline:2px solid #764ba2;outline-offset:2px;border-radius:10px;} .app-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;} .app-header img{width:100px;height:100px;border-radius:24px;box-shadow:0 14px 40px rgba(98,79,144,0.18);background:white;} .app-title{font-size:2.2rem;font-weight:800;color:#33264b;margin-bottom:0.3rem;} .app-subtitle{font-size:1.05rem;color:#5a4e6d;margin-bottom:1.2rem;} .store-badge{display:inline-block;margin-bottom:1.2rem;transition:transform 0.25s ease;} .store-badge:hover,.store-badge:focus{transform:scale(1.04);} .pill{display:inline-flex;align-items:center;gap:0.45rem;padding:0.4rem 0.72rem;border-radius:999px;background:rgba(118,75,162,0.1);border:1px solid rgba(118,75,162,0.16);color:#6a4ba2;font-size:0.9rem;font-weight:700;margin-right:0.5rem;margin-bottom:0.5rem;} .section{background:white;border-radius:22px;box-shadow:0 18px 60px rgba(98,79,144,0.09);padding:2rem;margin-bottom:1.6rem;border:1px solid rgba(118,75,162,0.08);} .section h2{color:#563b87;margin-top:0;font-size:1.75rem;} .section h3{color:#563b87;font-size:1.25rem;margin-top:1.6rem;margin-bottom:0.8rem;} .features-list{margin:1rem 0 0.75rem;padding-left:1.2rem;} .features-list li{margin-bottom:0.7rem;color:#574d68;} .quote{margin:1.1rem 0 0.5rem;padding:1rem 1.05rem;border-left:3px solid #b18cf0;background:rgba(177,140,240,0.08);border-radius:14px;color:#46365f;} .muted{color:#6a6178;} @media (max-width:640px){.app-header{flex-direction:column;align-items:flex-start;} .app-header img{width:84px;height:84px;} .container{padding:1rem 0.75rem 2.5rem;} .app-title{font-size:1.85rem;} .section{padding:1.4rem;}} @media (prefers-reduced-motion: reduce){.store-badge:hover,.store-badge:focus{transform:none;}}
     </style>
 </head>
 <body>
-    <main class="container">
-        <nav aria-label="Navegación de la aplicación">
-            <a href="../index.html" class="back-link" aria-label="Volver a la lista de aplicaciones">&larr; Volver a la lista de Apps</a>
-        </nav>
-
-        <header class="app-header">
-            <img src="assets/icon.png" alt="Icono de la aplicación Himnario Celebremos">
-            <div>
-                <h1 class="app-title">Himnario Celebremos App</h1>
-                <p class="app-subtitle">Tu himnario digital completo con letras y música cristiana</p>
-                <a class="store-badge" href="https://apps.apple.com/us/app/himnario-celebremos/id6746585048" target="_blank" rel="noopener noreferrer" aria-label="Descargar Himnario Celebremos en el App Store">
-                    <img src="assets/available-on-the-app-store_150x50.png" alt="Disponible en el App Store">
-                </a>
-            </div>
-        </header>
-
-        <section class="section" aria-labelledby="app-description">
-            <h2 id="app-description">🎵 Himnario Celebremos - Tu Compañero Perfecto para la Adoración</h2>
-            <p>Descubre la aplicación definitiva para cantar y celebrar la gloria de Dios. <strong>Himnario Celebremos</strong> te ofrece una colección completa de himnos cristianos tradicionales y contemporáneos, diseñada para enriquecer tu experiencia de adoración y alabanza.</p>
-
-            <h3>✨ Características Principales</h3>
-            <ul class="features-list">
-                <li><strong>📖 Colección Completa de Himnos:</strong> Más de 500 himnos, letras completas, organización por temas y categorías.</li>
-                <li><strong>❤️ Sistema de Favoritos Inteligente:</strong> Marca y organiza tus himnos preferidos, sincronización automática.</li>
-                <li><strong>📱 Experiencia Personalizada:</strong> Ajusta el tamaño del texto, fuentes, modo oscuro, interfaz adaptativa.</li>
-                <li><strong>🎼 Playlists Temáticas:</strong> Crea y comparte colecciones por ocasión y tema.</li>
-                <li><strong>📚 Historial Inteligente:</strong> Registro automático de himnos recientes, navegación fluida.</li>
-                <li><strong>🔍 Búsqueda Avanzada:</strong> Busca por título, letra, o número.</li>
-            </ul>
-
-            <h3>🎯 Perfecto Para:</h3>
-            <ul class="features-list">
-                <li>🏛️ Iglesias y Congregaciones</li>
-                <li>👨‍👩‍👧‍👦 Familias Cristianas</li>
-                <li>🎤 Músicos y Ministros</li>
-                <li>📖 Estudiantes y Educadores</li>
-            </ul>
-
-            <h3>🌟 Beneficios Únicos</h3>
-            <ul class="features-list">
-                <li>🎵 Experiencia de adoración mejorada, interfaz intuitiva, diseño centrado en la experiencia espiritual.</li>
-                <li>📱 Tecnología moderna, sincronización en la nube, actualizaciones regulares, compatibilidad iOS.</li>
-                <li>🤝 Comunidad cristiana activa, comparte y descubre nuevos himnos.</li>
-            </ul>
-
-            <p><strong>Descarga ahora Himnario Celebremos y transforma tu experiencia de adoración cristiana. ¡Celebremos juntos la gloria de Dios a través de la música!</strong></p>
-        </section>
-
-        <footer>
-            <a class="privacy-link" href="privacy-policy-es/index.html" aria-label="Ver política de privacidad de la aplicación">Política de Privacidad de la App</a>
-            <br>
-            <a class="privacy-link" href="support-es/index.html" aria-label="Obtener soporte de la aplicación">Soporte de la App</a>
-        </footer>
-    </main>
-</body>
-</html>
+<main class="container"><nav aria-label="Navegación de la aplicación"><a href="../index.html" class="back-link" aria-label="Volver a la lista de aplicaciones">&larr; Volver a la lista de Apps</a></nav><header class="app-header"><img src="assets/icon.png" alt="Icono de Himnario Celebremos"><div><h1 class="app-title">Himnario Celebremos</h1><p class="app-subtitle">Un himnario cristiano digital para iglesias, familias y equipos de alabanza.</p><div aria-label="Etiquetas de posicionamiento"><span class="pill">Adoración</span><span class="pill">Letras de himnos</span><span class="pill">Uso en iglesia</span></div><a class="store-badge" href="https://apps.apple.com/us/app/himnario-celebremos/id6746585048" target="_blank" rel="noopener noreferrer" aria-label="Descargar Himnario Celebremos en el App Store"><img src="assets/available-on-the-app-store_150x50.png" alt="Disponible en el App Store"></a></div></header><section class="section" aria-labelledby="app-description"><h2 id="app-description">Tenga los himnos que canta siempre a la mano.</h2><p class="muted">Himnario Celebremos lleva una biblioteca de himnos cristianos al iPhone para que sea más fácil encontrar letras, volver a sus favoritos y tener un himnario confiable listo para la iglesia, la adoración en familia y la devoción personal.</p><div class="quote"><strong>Una biblioteca de himnos diseñada para sentirse simple, familiar y lista cuando comienza la adoración.</strong></div><h3>Qué incluye</h3><ul class="features-list"><li><strong>Acceso completo a himnos:</strong> explore una colección amplia de himnos cristianos en un solo lugar.</li><li><strong>Favoritos y acceso rápido:</strong> guarde los himnos a los que vuelve con más frecuencia.</li><li><strong>Búsqueda y exploración:</strong> encuentre himnos por título, letra o número.</li><li><strong>Lectura pensada para adoración:</strong> una interfaz simple para uso real en iglesia o en casa.</li></ul><h3>Ideal para</h3><ul class="features-list"><li>Iglesias y congregaciones</li><li>Familias cristianas</li><li>Líderes de alabanza y músicos</li><li>Estudiantes y maestros que necesitan letras de himnos a la mano</li></ul><p class="muted">Himnario Celebremos está diseñado para apoyar la adoración, no para distraer de ella.</p></section><section class="section" aria-labelledby="privacy-and-support"><h2 id="privacy-and-support">Privacidad y soporte</h2><p class="muted">Si necesita ayuda, soporte o la política de privacidad de la app, use los enlaces a continuación.</p><a class="privacy-link" href="privacy-policy/index.html" aria-label="Ver política de privacidad de la app">Política de Privacidad</a><br><a class="privacy-link" href="support/index.html" aria-label="Obtener soporte de la app">Soporte de la App</a></section></main></body></html>
