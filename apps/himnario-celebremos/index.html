@@ -63,6 +63,8 @@
     .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
     ul { margin: 14px 0 0; padding-left: 18px; }
     .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; }
+    .screenshot-panel { display: grid; place-items: center; padding: 12px; border-radius: var(--radius-xl); background: rgba(255,255,255,0.64); border: 1px solid rgba(223,204,173,0.55); }
+    .screenshot-panel img { width: min(100%, 340px); height: auto; display: block; border-radius: 28px; box-shadow: var(--shadow); }
     @media (max-width: 900px) { .hero, .section-grid { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
   </style>
 </head>
@@ -98,10 +100,14 @@
       </div>
       <aside class="hero-side">
         <div class="app-chip">
+          <img src="https://richcodestudio.com/apps/assets/himnario-icon.png" alt="Himnario Celebremos app icon" />
           <div>
             <strong>Himnario Celebremos</strong>
             <span>Letras de himnos y cantos en español para cultos, ensayos y uso personal.</span>
           </div>
+        </div>
+        <div class="screenshot-panel">
+          <img src="https://richcodestudio.com/apps/assets/himnario-shot.png" alt="Himnario app screenshot" loading="lazy" />
         </div>
         <div class="stack">
           <div class="card">
