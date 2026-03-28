@@ -4,325 +4,502 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://richcodestudio.com/">
-    <meta name="description" content="Rich Code Studio - Professional iOS and Mobile App Development. We craft exceptional mobile applications that bring your ideas to life.">
-    <meta name="keywords" content="iOS development, mobile app development, Swift, SwiftUI, app development, Rich Code Studio">
+    <meta name="description" content="Rich Code Studio builds thoughtful iOS apps and digital products, including Gracewell and OneLane. Explore our apps, product work, and support resources.">
+    <meta name="keywords" content="Rich Code Studio, iOS app studio, SwiftUI app development, Christian prayer app, productivity app, mobile product studio">
     <meta name="author" content="Rich Code Studio">
-    <meta property="og:title" content="Rich Code Studio - Mobile App Development">
-    <meta property="og:description" content="Professional iOS and mobile app development services. We craft exceptional applications that bring your ideas to life.">
+    <meta property="og:title" content="Rich Code Studio | Thoughtful iOS Apps and Product Design">
+    <meta property="og:description" content="We build calm, focused iPhone apps with strong product thinking, clean design, and launch-ready execution.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://richcodestudio.com/">
     <meta property="og:site_name" content="Rich Code Studio">
     <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Rich Code Studio - Professional Mobile App Development | iOS & Swift">
-    <meta name="twitter:description" content="Professional iOS and mobile app development services. We craft exceptional applications that bring your ideas to life.">
-    <title>Rich Code Studio - Professional Mobile App Development | iOS & Swift</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rich Code Studio | Thoughtful iOS Apps and Product Design">
+    <meta name="twitter:description" content="We build calm, focused iPhone apps with strong product thinking, clean design, and launch-ready execution.">
+    <title>Rich Code Studio | Thoughtful iOS Apps and Product Design</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Rich Code Studio",
+      "url": "https://richcodestudio.com/",
+      "email": "support@richcodestudio.com",
+      "sameAs": ["https://richcodestudio.com/apps/"],
+      "description": "Rich Code Studio builds thoughtful iOS apps and digital products with a focus on clarity, care, and launch-ready execution."
+    }
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg: #f6f1e8;
+            --surface: rgba(255, 255, 255, 0.84);
+            --surface-strong: #ffffff;
+            --ink: #243047;
+            --muted: rgba(36, 48, 71, 0.72);
+            --line: rgba(148, 117, 57, 0.14);
+            --accent: #c9a95a;
+            --accent-deep: #866b2b;
+            --shadow: 0 24px 80px rgba(59, 50, 33, 0.08);
+            --radius-xl: 28px;
+            --radius-lg: 22px;
+            --radius-md: 16px;
         }
-
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(214, 186, 126, 0.18), transparent 28%),
+                radial-gradient(circle at top right, rgba(141, 168, 210, 0.18), transparent 24%),
+                var(--bg);
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
         }
-
+        a { color: inherit; }
         .container {
-            max-width: 1200px;
+            width: min(1120px, calc(100% - 32px));
             margin: 0 auto;
-            padding: 0 20px;
         }
-
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(18px);
+            background: rgba(246, 241, 232, 0.78);
+            border-bottom: 1px solid rgba(148, 117, 57, 0.08);
         }
-
-        .header-content {
+        .nav-shell {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.25rem;
+            padding: 1rem 0;
         }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
+        .brand {
             text-decoration: none;
-            color: white;
-            transition: opacity 0.3s ease;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
         }
-
-        .logo:hover,
-        .logo:focus {
-            opacity: 0.8;
+        .brand small {
+            display: block;
+            font-size: 0.77rem;
+            color: var(--muted);
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
-
-        .logo:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
-        }
-
         nav ul {
             list-style: none;
             display: flex;
-            gap: 2rem;
+            gap: 1.25rem;
+            margin: 0;
+            padding: 0;
+            align-items: center;
         }
-
         nav a {
-            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-            padding: 0.5rem 0;
-        }
-
-        nav a:hover {
-            opacity: 0.8;
-        }
-
-        nav a:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
-        }
-
-        main {
-            min-height: calc(100vh - 200px);
-            padding: 4rem 0;
-        }
-
-        .hero {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 8px;
+            color: var(--muted);
             font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 0.55rem 0.85rem;
+            border-radius: 999px;
         }
-
-        .cta-button:hover,
-        .cta-button:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        nav a:hover,
+        nav a:focus,
+        nav a[aria-current="page"] {
+            color: var(--ink);
+            background: rgba(255,255,255,0.72);
+            outline: none;
         }
-
-        .cta-button:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
+        .nav-cta {
+            background: var(--ink);
+            color: white !important;
         }
-
-        .features {
+        main {
+            padding: 3rem 0 4.5rem;
+        }
+        .hero {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+            grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+            gap: 1.5rem;
+            align-items: stretch;
+            margin-bottom: 1.75rem;
         }
-
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
+        .hero-panel,
+        .hero-side,
+        .section-card,
+        .app-card,
+        .quote-card,
+        .contact-card {
+            border: 1px solid var(--line);
+            background: var(--surface);
+            backdrop-filter: blur(14px);
+            box-shadow: var(--shadow);
+            border-radius: var(--radius-xl);
         }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .hero-panel {
+            padding: 3rem;
         }
-
-        .feature-card:focus-within {
-            outline: 2px solid #667eea;
-            outline-offset: 2px;
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: var(--accent-deep);
+            background: rgba(201, 169, 90, 0.14);
+            border: 1px solid rgba(201, 169, 90, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        h1, h2, h3 { line-height: 1.08; margin: 0; letter-spacing: -0.03em; }
+        h1 { font-size: clamp(2.9rem, 7vw, 4.8rem); margin-top: 1rem; }
+        h2 { font-size: clamp(2rem, 4vw, 2.9rem); margin-bottom: 0.85rem; }
+        h3 { font-size: 1.28rem; margin-bottom: 0.45rem; }
+        .hero-copy,
+        .section-lead,
+        .muted { color: var(--muted); }
+        .hero-copy { font-size: 1.18rem; max-width: 38rem; margin: 1.1rem 0 1.6rem; }
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: 1.4rem;
         }
-
-        .feature-card h3 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .feature-card p {
-            color: #666;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            padding: 2rem 0 1rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: #ccc;
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55rem;
+            border-radius: 999px;
+            padding: 0.95rem 1.35rem;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
-
+        .btn:hover,
+        .btn:focus { transform: translateY(-1px); }
+        .btn-primary {
+            background: linear-gradient(135deg, #d6b56e, #c39a42);
+            color: #1f2230;
+            box-shadow: 0 12px 30px rgba(195, 154, 66, 0.26);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.75);
+            color: var(--ink);
+            border-color: rgba(148, 117, 57, 0.14);
+        }
+        .hero-meta {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.85rem;
+            margin-top: 1.5rem;
+        }
+        .hero-metric {
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.72);
+            border: 1px solid rgba(148, 117, 57, 0.1);
+        }
+        .hero-metric strong {
+            display: block;
+            font-size: 1.15rem;
+            margin-bottom: 0.2rem;
+        }
+        .hero-side {
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .hero-side .label,
+        .mini-label {
+            color: var(--accent-deep);
+            font-weight: 700;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .featured-stack {
+            display: grid;
+            gap: 0.9rem;
+        }
+        .mini-card {
+            padding: 1rem 1.05rem;
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.76);
+            border: 1px solid rgba(148, 117, 57, 0.09);
+        }
+        .mini-card p { margin: 0.2rem 0 0; color: var(--muted); }
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.1rem;
+            margin: 1rem 0 1.9rem;
+        }
+        .section-card {
+            padding: 1.5rem;
+        }
+        .section-card p,
+        .app-card p,
+        .quote-card p,
+        .contact-card p,
+        li,
+        address { color: var(--muted); }
+        .section-wrap { margin-top: 3rem; }
+        .quote-card {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 1.25rem;
+            align-items: center;
+        }
+        .quote-card strong {
+            display: block;
+            font-size: 1.45rem;
+            margin-bottom: 0.7rem;
+        }
+        .apps-strip {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.15rem;
+            margin-top: 1rem;
+        }
+        .app-card {
+            padding: 1.5rem;
+        }
+        .app-card img {
+            width: 68px;
+            height: 68px;
+            border-radius: 18px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 12px 25px rgba(59, 50, 33, 0.12);
+        }
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: 0.9rem;
+        }
+        .tag {
+            border-radius: 999px;
+            padding: 0.38rem 0.7rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent-deep);
+            background: rgba(201, 169, 90, 0.12);
+            border: 1px solid rgba(201, 169, 90, 0.18);
+        }
+        .contact-band {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 1.1rem;
+            margin-top: 3rem;
+        }
+        .contact-card {
+            padding: 1.7rem;
+        }
+        footer {
+            padding: 0 0 3rem;
+        }
+        .footer-shell {
+            border-top: 1px solid rgba(148, 117, 57, 0.12);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a { text-decoration: none; }
         .footer-links a:hover,
-        .footer-links a:focus {
-            color: white;
+        .footer-links a:focus { text-decoration: underline; }
+        @media (max-width: 900px) {
+            .hero,
+            .quote-card,
+            .contact-band { grid-template-columns: 1fr; }
+            .section-grid,
+            .apps-strip { grid-template-columns: 1fr; }
+            .hero-meta { grid-template-columns: 1fr; }
         }
-
-        .footer-links a:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
+        @media (max-width: 720px) {
+            .nav-shell { flex-direction: column; align-items: flex-start; }
+            nav ul { flex-wrap: wrap; gap: 0.5rem; }
+            .hero-panel,
+            .hero-side,
+            .section-card,
+            .quote-card,
+            .contact-card,
+            .app-card { padding: 1.3rem; }
+            main { padding-top: 1.5rem; }
         }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 1rem;
-            border-top: 1px solid #555;
-            color: #ccc;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-        }
-
         @media (prefers-reduced-motion: reduce) {
-            .feature-card:hover,
-            .cta-button:hover,
-            .cta-button:focus {
-                transform: none;
-            }
+            html { scroll-behavior: auto; }
+            .btn:hover,
+            .btn:focus { transform: none; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">Rich Code Studio</a>
-                <nav aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html" aria-current="page">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="apps/index.html">Apps</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <section class="hero">
-                <h1>Professional Mobile App Development</h1>
-                <p>We craft exceptional iOS and mobile applications that bring your ideas to life. From concept to App Store, we deliver quality solutions that users love.</p>
-                <a href="contact.html" class="cta-button" aria-label="Start your mobile app development project">Start Your Project</a>
-            </section>
-
-            <section class="features" aria-label="Our services">
-                <article class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">📱</div>
-                    <h3>iOS Development</h3>
-                    <p>Native iOS applications built with Swift and SwiftUI, following Apple's best practices and design guidelines for optimal performance and user experience.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Beautiful, intuitive interfaces designed with user experience in mind. We create apps that are not only functional but delightful to use.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">🚀</div>
-                    <h3>App Store Optimization</h3>
-                    <p>Complete support from development to App Store submission, including optimization for discoverability and compliance with App Store guidelines.</p>
-                </article>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h3>Rich Code Studio</h3>
-                    <p>Professional mobile app development services specializing in iOS applications and user-centered design.</p>
+<header>
+    <div class="container nav-shell">
+        <a href="index.html" class="brand" aria-current="page">Rich Code Studio<small>iOS Product Studio</small></a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="apps/index.html">Apps</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apps/gracewell/index.html" class="nav-cta">Gracewell</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-panel">
+                <span class="eyebrow">Thoughtful products for real life</span>
+                <h1 id="hero-title">We build iPhone apps that feel calm, clear, and ready to ship.</h1>
+                <p class="hero-copy">Rich Code Studio designs and develops focused mobile products with strong product thinking, polished interface work, and launch-ready execution. Our apps are built to be useful, trustworthy, and easy to come back to.</p>
+                <div class="cta-row">
+                    <a href="apps/index.html" class="btn btn-primary">Explore Our Apps</a>
+                    <a href="contact.html" class="btn btn-secondary">Talk With Us</a>
                 </div>
-
-                <nav class="footer-links" aria-label="Footer navigation">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="apps/index.html">Apps</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                    </ul>
-                </nav>
+                <div class="hero-meta" aria-label="Studio strengths">
+                    <div class="hero-metric">
+                        <strong>iOS-first</strong>
+                        <span class="muted">SwiftUI products shaped for Apple platforms and App Store launch.</span>
+                    </div>
+                    <div class="hero-metric">
+                        <strong>Product-led</strong>
+                        <span class="muted">Strategy, UX, copy, flows, and launch polish in one process.</span>
+                    </div>
+                    <div class="hero-metric">
+                        <strong>Launch-minded</strong>
+                        <span class="muted">Support pages, accessibility, review readiness, and trust signals included.</span>
+                    </div>
+                </div>
             </div>
+            <aside class="hero-side" aria-label="Featured products and approach">
+                <div>
+                    <div class="label">Featured now</div>
+                    <div class="featured-stack">
+                        <article class="mini-card">
+                            <strong>Gracewell</strong>
+                            <p>A Scripture-rooted prayer, journaling, and Together app for daily spiritual formation.</p>
+                        </article>
+                        <article class="mini-card">
+                            <strong>OneLane</strong>
+                            <p>A weekly clarity ritual for busy, capable people who need less noise and more focus.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="mini-card">
+                    <div class="mini-label">What we care about</div>
+                    <p>Clarity over clutter. Calm over gimmicks. Native-feeling experiences that users can trust.</p>
+                </div>
+            </aside>
+        </section>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Rich Code Studio LLC. All rights reserved.</p>
+        <section class="section-wrap" aria-labelledby="services-title">
+            <h2 id="services-title">What Rich Code Studio does</h2>
+            <p class="section-lead">We help move ideas from concept to polished product, with a particular strength in iPhone experiences that need care, clarity, and strong execution.</p>
+            <div class="section-grid">
+                <article class="section-card">
+                    <h3>Product Strategy</h3>
+                    <p>Positioning, scope, feature tradeoffs, launch sequencing, and the product decisions that make an app easier to understand and easier to market.</p>
+                </article>
+                <article class="section-card">
+                    <h3>Native iOS Design</h3>
+                    <p>SwiftUI-first interfaces shaped around Apple patterns, accessibility, readable hierarchy, and polished interaction details.</p>
+                </article>
+                <article class="section-card">
+                    <h3>Launch Readiness</h3>
+                    <p>App Store compliance, support and legal pages, purchase-surface trust signals, and the last-mile cleanup that helps a product ship well.</p>
+                </article>
             </div>
+        </section>
+
+        <section class="quote-card" aria-labelledby="philosophy-title">
+            <div>
+                <span class="eyebrow">Studio philosophy</span>
+                <strong id="philosophy-title">Useful products earn trust faster than loud ones.</strong>
+                <p>We favor focused feature sets, strong defaults, and interfaces that help people know what to do next. That usually leads to better retention, better reviews, and a cleaner launch story.</p>
+            </div>
+            <div class="mini-card">
+                <div class="mini-label">Good fit projects</div>
+                <p>Apps that need strong UX judgment, careful wording, App Store readiness, and thoughtful polish around subscription, trust, and daily use.</p>
+            </div>
+        </section>
+
+        <section class="section-wrap" aria-labelledby="apps-title">
+            <h2 id="apps-title">Current apps</h2>
+            <p class="section-lead">Our apps are intentionally different in tone, but they share the same product standards: clarity, care, and a clean user experience.</p>
+            <div class="apps-strip">
+                <article class="app-card">
+                    <img src="apps/gracewell/assets/icon-gracewell-1024.png" alt="Gracewell app icon">
+                    <h3>Gracewell</h3>
+                    <p>Prayer, Scripture, journaling, guided reflection, and shared spiritual rhythms in one calm formation app.</p>
+                    <div class="tag-row" aria-label="Gracewell tags">
+                        <span class="tag">Prayer rhythm</span>
+                        <span class="tag">Scripture</span>
+                        <span class="tag">Together</span>
+                    </div>
+                    <p><a href="apps/gracewell/index.html" class="btn btn-secondary" style="margin-top: 1rem;">View Gracewell</a></p>
+                </article>
+                <article class="app-card">
+                    <img src="apps/onelane-clarity-app/assets/OneLane-icon.png" alt="OneLane app icon">
+                    <h3>OneLane: Weekly Clarity</h3>
+                    <p>A weekly reset for people who need one lane, one move, and less mental sprawl.</p>
+                    <div class="tag-row" aria-label="OneLane tags">
+                        <span class="tag">Weekly focus</span>
+                        <span class="tag">Clarity ritual</span>
+                        <span class="tag">Low pressure</span>
+                    </div>
+                    <p><a href="apps/onelane-clarity-app/index.html" class="btn btn-secondary" style="margin-top: 1rem;">View OneLane</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-band" aria-labelledby="contact-title">
+            <article class="contact-card">
+                <h2 id="contact-title">Need product help or launch support?</h2>
+                <p>We can help with app positioning, interface refinement, launch readiness, App Store surfaces, and making an iOS product feel more coherent before release.</p>
+                <div class="cta-row" style="margin-top: 1rem; margin-bottom: 0;">
+                    <a href="contact.html" class="btn btn-primary">Contact Rich Code Studio</a>
+                    <a href="mailto:support@richcodestudio.com" class="btn btn-secondary">support@richcodestudio.com</a>
+                </div>
+            </article>
+            <article class="contact-card">
+                <div class="mini-label">Support and resources</div>
+                <p>Looking for an app-specific policy or support page? Visit the apps section for Gracewell support, privacy, and terms links.</p>
+                <p><a href="apps/index.html" class="btn btn-secondary">Browse App Pages</a></p>
+            </article>
+        </section>
+    </div>
+</main>
+<footer>
+    <div class="container footer-shell">
+        <div>© <span id="year"></span> Rich Code Studio</div>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="apps/index.html">Apps</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
         </div>
-    </footer>
+    </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

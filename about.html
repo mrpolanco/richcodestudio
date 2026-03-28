@@ -4,391 +4,243 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://richcodestudio.com/about/">
-    <meta name="description" content="About Rich Code Studio - Learn about our mobile app development expertise, mission, and commitment to quality iOS applications">
-    <meta name="keywords" content="about Rich Code Studio, iOS development, mobile app development, Swift, SwiftUI, app development company">
+    <meta name="description" content="About Rich Code Studio, an iOS product studio focused on thoughtful app design, launch-ready execution, and products people trust using every day.">
+    <meta name="keywords" content="about Rich Code Studio, iOS product studio, SwiftUI design, app launch support, mobile product design">
     <meta name="author" content="Rich Code Studio">
-    <meta property="og:title" content="About Rich Code Studio - Mobile App Development">
-    <meta property="og:description" content="Learn about our mobile app development expertise and mission to create exceptional iOS applications">
+    <meta property="og:title" content="About Rich Code Studio | iOS Product Studio">
+    <meta property="og:description" content="We build thoughtful iPhone apps with strong product judgment, polished UI, and launch-ready execution.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://richcodestudio.com/about/">
     <meta property="og:site_name" content="Rich Code Studio">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="About - Rich Code Studio | Mobile App Development Expertise">
-    <meta name="twitter:description" content="Learn about our mobile app development expertise and mission to create exceptional iOS applications">
-    <title>About - Rich Code Studio | Mobile App Development Expertise</title>
+    <meta name="twitter:title" content="About Rich Code Studio | iOS Product Studio">
+    <meta name="twitter:description" content="We build thoughtful iPhone apps with strong product judgment, polished UI, and launch-ready execution.">
+    <title>About Rich Code Studio | iOS Product Studio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg: #f6f1e8;
+            --surface: rgba(255, 255, 255, 0.84);
+            --ink: #243047;
+            --muted: rgba(36, 48, 71, 0.72);
+            --line: rgba(148, 117, 57, 0.14);
+            --accent: #c9a95a;
+            --accent-deep: #866b2b;
+            --shadow: 0 24px 80px rgba(59, 50, 33, 0.08);
         }
-
+        * { box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(214, 186, 126, 0.18), transparent 28%),
+                radial-gradient(circle at top right, rgba(141, 168, 210, 0.16), transparent 24%),
+                var(--bg);
+            line-height: 1.65;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
+        .container { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(18px);
+            background: rgba(246, 241, 232, 0.78);
+            border-bottom: 1px solid rgba(148, 117, 57, 0.08);
         }
-
-        .header-content {
+        .nav-shell {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem 0;
         }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: white;
-            transition: opacity 0.3s ease;
-        }
-
-        .logo:hover,
-        .logo:focus {
-            opacity: 0.8;
-        }
-
-        .logo:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
+        .brand { text-decoration: none; color: inherit; font-weight: 800; }
+        .brand small { display: block; color: var(--muted); font-size: 0.77rem; letter-spacing: 0.08em; text-transform: uppercase; }
+        nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0; flex-wrap: wrap; }
         nav a {
-            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-            padding: 0.5rem 0;
+            color: var(--muted);
+            font-weight: 600;
+            padding: 0.55rem 0.85rem;
+            border-radius: 999px;
         }
-
-        nav a:hover, nav a.active {
-            opacity: 0.8;
+        nav a:hover,
+        nav a:focus,
+        nav a[aria-current="page"] {
+            color: var(--ink);
+            background: rgba(255,255,255,0.72);
+            outline: none;
         }
-
-        nav a:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
+        .nav-cta { background: var(--ink); color: white !important; }
+        main { padding: 2.5rem 0 4.5rem; }
+        .hero, .section, .value, .summary {
+            border: 1px solid var(--line);
+            background: var(--surface);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
         }
-
-        main {
-            min-height: calc(100vh - 200px);
-            padding: 4rem 0;
+        .hero { padding: 2.6rem; margin-bottom: 1.2rem; }
+        .eyebrow {
+            display: inline-block;
+            padding: 0.42rem 0.78rem;
+            border-radius: 999px;
+            background: rgba(201, 169, 90, 0.14);
+            color: var(--accent-deep);
+            font-size: 0.83rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
-
-        .page-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .page-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .page-header p {
-            font-size: 1.3rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .about-content {
+        h1, h2, h3 { line-height: 1.08; letter-spacing: -0.03em; margin: 0; }
+        h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); margin-top: 1rem; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.75rem; }
+        h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+        p, li { color: var(--muted); }
+        .lead { font-size: 1.12rem; max-width: 44rem; }
+        .content-grid {
             display: grid;
-            gap: 4rem;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 1.1rem;
+            margin-top: 1.1rem;
         }
-
-        .section {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .section h2 {
-            margin-bottom: 1.5rem;
-            color: #333;
-            font-size: 2rem;
-        }
-
-        .section p {
-            margin-bottom: 1.5rem;
-            color: #666;
-            font-size: 1.1rem;
-        }
-
+        .section { padding: 1.8rem; }
+        .stack { display: grid; gap: 1.1rem; }
         .values-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
         }
-
-        .value-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .value-item:hover {
-            transform: translateY(-2px);
-        }
-
-        .value-item:focus-within {
-            outline: 2px solid #667eea;
-            outline-offset: 2px;
-        }
-
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-item h3 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 12px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            padding: 2rem 0 1rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: #ccc;
+        .value { padding: 1.35rem; }
+        .summary { padding: 1.5rem; }
+        .summary strong { display: block; margin-bottom: 0.45rem; }
+        .bullet-list { padding-left: 1.1rem; margin: 0.8rem 0 0; }
+        .bullet-list li { margin-bottom: 0.65rem; }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 0.9rem 1.25rem;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: 700;
+            border: 1px solid rgba(148, 117, 57, 0.14);
+            background: rgba(255,255,255,0.74);
+            color: var(--ink);
         }
-
+        .btn-primary { background: linear-gradient(135deg, #d6b56e, #c39a42); color: #1f2230; border-color: transparent; }
+        footer {
+            padding: 0 0 3rem;
+        }
+        .footer-shell {
+            border-top: 1px solid rgba(148, 117, 57, 0.12);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+        }
+        .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .footer-links a { text-decoration: none; color: inherit; }
         .footer-links a:hover,
-        .footer-links a:focus {
-            color: white;
+        .footer-links a:focus { text-decoration: underline; }
+        @media (max-width: 840px) {
+            .content-grid,
+            .values-grid { grid-template-columns: 1fr; }
         }
-
-        .footer-links a:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 1rem;
-            border-top: 1px solid #555;
-            color: #ccc;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .page-header h1 {
-                font-size: 2rem;
-            }
-
-            .page-header p {
-                font-size: 1.1rem;
-            }
-
-            .section {
-                padding: 2rem;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .value-item:hover {
-                transform: none;
-            }
+        @media (max-width: 720px) {
+            .nav-shell { flex-direction: column; align-items: flex-start; }
+            .hero, .section, .value, .summary { padding: 1.3rem; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">Rich Code Studio</a>
-                <nav aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html" class="active" aria-current="page">About</a></li>
-                        <li><a href="apps/index.html">Apps</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+<header>
+    <div class="container nav-shell">
+        <a href="index.html" class="brand">Rich Code Studio<small>iOS Product Studio</small></a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="apps/index.html">Apps</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apps/gracewell/index.html" class="nav-cta">Gracewell</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <section class="hero">
+            <span class="eyebrow">About the studio</span>
+            <h1>We care about making apps feel clear, calm, and trustworthy.</h1>
+            <p class="lead">Rich Code Studio is an iOS product studio focused on thoughtful app design, launch readiness, and the kind of details that make a product feel finished. We like products with a strong point of view and a clean user experience.</p>
+        </section>
 
-    <main>
-        <div class="container">
-            <section class="page-header">
-                <h1>About Rich Code Studio</h1>
-                <p>Passionate about creating exceptional mobile experiences that make a difference in people's lives.</p>
+        <div class="content-grid">
+            <section class="section" aria-labelledby="what-we-do">
+                <h2 id="what-we-do">What we do well</h2>
+                <p>We work best on apps that need more than code. That usually means product framing, copy clarity, interface refinement, subscription trust, accessibility, App Store readiness, and the many small decisions that shape whether an app feels coherent.</p>
+                <ul class="bullet-list">
+                    <li>iOS-first product design and SwiftUI implementation</li>
+                    <li>App Store launch prep, support surfaces, and policy pages</li>
+                    <li>Interface cleanup, hierarchy, and conversion-minded UX</li>
+                    <li>Product editing: scope, wording, prioritization, and polish</li>
+                </ul>
+                <div class="cta-row">
+                    <a href="apps/index.html" class="btn btn-primary">See Our Apps</a>
+                    <a href="contact.html" class="btn">Start a Conversation</a>
+                </div>
             </section>
 
-            <div class="about-content">
-                <section class="section" aria-labelledby="our-story">
-                    <h2 id="our-story">Our Story</h2>
-                    <p>Rich Code Studio was founded with a simple mission: to bridge the gap between innovative ideas and exceptional mobile applications. We believe that great apps start with understanding user needs and translating them into intuitive, powerful solutions.</p>
-                    <p>Specializing in iOS development, we leverage the latest technologies including Swift, SwiftUI, and Apple's cutting-edge frameworks to deliver apps that not only meet but exceed expectations. Our approach combines technical excellence with creative design thinking to produce applications that users genuinely love to use.</p>
-                    <p>From startups looking to make their mark to established businesses expanding their digital presence, we partner with clients to turn their vision into reality. Every project is an opportunity to push boundaries and create something remarkable.</p>
-                </section>
-
-                <section class="section" aria-labelledby="our-values">
-                    <h2 id="our-values">Our Values</h2>
-                    <div class="values-grid">
-                        <article class="value-item">
-                            <div class="value-icon" aria-hidden="true">💎</div>
-                            <h3>Quality First</h3>
-                            <p>We never compromise on quality. Every line of code is crafted with precision and attention to detail.</p>
-                        </article>
-                        <article class="value-item">
-                            <div class="value-icon" aria-hidden="true">🤝</div>
-                            <h3>Client Partnership</h3>
-                            <p>We work as an extension of your team, collaborating closely to achieve your goals.</p>
-                        </article>
-                        <article class="value-item">
-                            <div class="value-icon" aria-hidden="true">🚀</div>
-                            <h3>Innovation</h3>
-                            <p>We stay at the forefront of technology to deliver cutting-edge solutions.</p>
-                        </article>
-                        <article class="value-item">
-                            <div class="value-icon" aria-hidden="true">⏰</div>
-                            <h3>Reliability</h3>
-                            <p>We deliver on time and maintain clear communication throughout the project lifecycle.</p>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="section" aria-labelledby="our-expertise">
-                    <h2 id="our-expertise">Our Expertise</h2>
-                    <p>We specialize in native iOS development using the latest Apple technologies and best practices. Our technical stack includes Swift for robust application logic, SwiftUI for modern user interfaces, Core Data for data management, and integration with Apple's ecosystem including CloudKit, HealthKit, and ARKit.</p>
-                    <p>Our development process follows Apple's Human Interface Guidelines and incorporates accessibility standards to ensure our apps are usable by everyone. We also focus on performance optimization, security best practices, and App Store compliance to ensure smooth deployment and user adoption.</p>
-                    <!-- Commenting out
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Apps Delivered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">98%</div>
-                            <div class="stat-label">Client Satisfaction</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Support Available</div>
-                        </div>
-                    -->
-                    </div>
-
-                </section>
+            <div class="stack">
+                <article class="summary">
+                    <strong>Products should not feel like prototypes.</strong>
+                    <p>We care about the things users notice immediately: the first screen, the first subscription decision, the first empty state, and the first time they try to come back tomorrow.</p>
+                </article>
+                <article class="summary">
+                    <strong>Good launches are structured, not rushed.</strong>
+                    <p>We treat support pages, policy links, accessibility, and App Store review risks as part of product quality, not as cleanup for later.</p>
+                </article>
             </div>
         </div>
-    </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h3>Rich Code Studio</h3>
-                    <p>Professional mobile app development services specializing in iOS applications and user-centered design.</p>
-                </div>
-
-                <nav class="footer-links" aria-label="Footer navigation">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="apps/index.html">Apps</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                    </ul>
-                </nav>
+        <section class="section" style="margin-top: 1.15rem;" aria-labelledby="values-title">
+            <h2 id="values-title">How we work</h2>
+            <div class="values-grid">
+                <article class="value">
+                    <h3>Clarity over clutter</h3>
+                    <p>We prefer focused features, stronger defaults, and fewer competing actions on screen.</p>
+                </article>
+                <article class="value">
+                    <h3>Calm over gimmicks</h3>
+                    <p>Not every product needs noise, motion, or hype. A clear interface can be the differentiator.</p>
+                </article>
+                <article class="value">
+                    <h3>Trust over friction</h3>
+                    <p>Subscription surfaces, settings, privacy language, and support links should feel honest and easy to understand.</p>
+                </article>
+                <article class="value">
+                    <h3>Launch-ready by design</h3>
+                    <p>Accessibility, review readiness, and product copy are not extras. They are part of what makes a product ship well.</p>
+                </article>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Rich Code Studio LLC. All rights reserved.</p>
-            </div>
+        </section>
+    </div>
+</main>
+<footer>
+    <div class="container footer-shell">
+        <div>© <span id="year"></span> Rich Code Studio</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="apps/index.html">Apps</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
         </div>
-    </footer>
+    </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
