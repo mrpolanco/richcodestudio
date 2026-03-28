@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gracewell | Oración, Escritura y diario cristiano diario | Rich Code Studio</title>
+  <meta name="description" content="Gracewell es una app cristiana de oración, Escritura, diario y prácticas compartidas para formar un ritmo diario de fe con calma y claridad." />
+  <link rel="canonical" href="https://richcodestudio.com/apps/gracewell/es/" />
+  <link rel="alternate" hreflang="en" href="https://richcodestudio.com/apps/gracewell/" />
+  <meta property="og:title" content="Gracewell | Rich Code Studio" />
+  <meta property="og:description" content="Oración, Escritura, diario y prácticas compartidas para un ritmo diario de fe." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://richcodestudio.com/apps/gracewell/es/" />
+  <meta property="og:image" content="https://richcodestudio.com/apps/gracewell/assets/icon-gracewell-1024.png" />
+  <style>
+    :root {
+      --bg: #f5efe6;
+      --panel: rgba(255,255,255,0.88);
+      --panel-solid: #ffffff;
+      --line: rgba(223, 204, 173, 0.72);
+      --text: #25324d;
+      --muted: #6f7386;
+      --accent: #c9a24e;
+      --accent-deep: #9b7a2f;
+      --accent-soft: #f6ecd6;
+      --shadow: 0 24px 52px rgba(111, 92, 57, 0.10);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --content: 1160px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--text); background: linear-gradient(180deg, #faf6ef 0%, var(--bg) 100%); }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0 18px; }
+    .brand-title { font-size: 1.1rem; font-weight: 800; }
+    .brand-sub { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 3px; }
+    .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { padding: 10px 16px; border-radius: 999px; color: var(--muted); font-weight: 700; }
+    .nav-links a:hover, .nav-links a.active { background: var(--panel-solid); color: var(--text); box-shadow: var(--shadow); }
+    .hero { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
+    .hero-main, .hero-side { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); backdrop-filter: blur(10px); }
+    .hero-main { padding: 36px; }
+    .hero-side { padding: 28px; display: grid; gap: 18px; align-content: start; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.05em; margin: 18px 0 18px; max-width: 10ch; }
+    .lead { color: var(--muted); font-size: 1.16rem; line-height: 1.75; max-width: 58ch; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; padding: 15px 22px; border-radius: 999px; font-weight: 800; }
+    .cta.primary { background: var(--accent); color: #1f1f1f; }
+    .cta.secondary { background: var(--panel-solid); border: 1px solid var(--line); color: var(--text); }
+    .metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 28px; }
+    .metric { padding: 18px; border-radius: var(--radius-lg); background: rgba(255,255,255,0.78); border: 1px solid rgba(223,204,173,0.55); }
+    .metric strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+    .metric span { color: var(--muted); line-height: 1.55; }
+    .app-chip { display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: var(--radius-lg); background: rgba(255,255,255,0.72); border: 1px solid rgba(223,204,173,0.55); }
+    .app-chip img { width: 64px; height: 64px; border-radius: 18px; }
+    .app-chip strong { font-size: 1.15rem; display: block; margin-bottom: 4px; }
+    .app-chip span { color: var(--muted); line-height: 1.5; }
+    .stack { display: grid; gap: 14px; }
+    .card { padding: 20px; border-radius: var(--radius-lg); border: 1px solid rgba(223,204,173,0.55); background: rgba(255,255,255,0.7); }
+    .card h3 { margin: 0 0 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-deep); }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .section { padding: 22px 0 10px; }
+    .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+    .section-box { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; box-shadow: var(--shadow); }
+    .section-box h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 0 0 12px; letter-spacing: -0.04em; }
+    .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
+    ul { margin: 14px 0 0; padding-left: 18px; }
+    .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; }
+    @media (max-width: 900px) { .hero, .section-grid { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav">
+      <a href="https://richcodestudio.com/" aria-label="Inicio de Rich Code Studio">
+        <div class="brand-title">Rich Code Studio</div>
+        <div class="brand-sub">Estudio de productos iOS</div>
+      </a>
+      <div class="nav-links">
+        <a href="https://richcodestudio.com/">Inicio</a>
+        <a href="https://richcodestudio.com/about.html">Acerca de</a>
+        <a href="https://richcodestudio.com/apps/" class="active">Apps</a>
+        <a href="https://richcodestudio.com/contact.html">Contacto</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Formación espiritual diaria</div>
+        <h1>Una manera más serena de volver a la oración, la Escritura y la reflexión.</h1>
+        <p class="lead">Gracewell es una app cristiana de oración, Escritura, diario y prácticas compartidas que ayuda a formar un ritmo diario de fe con calma, claridad y apoyo guiado.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="#">Próximamente en App Store</a>
+          <a class="cta secondary" href="https://richcodestudio.com/apps/gracewell/">View in English</a>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>Ritmo diario</strong><span>Prácticas de mañana, mediodía y noche para volver a Dios de forma constante.</span></div>
+          <div class="metric"><strong>Oración y diario</strong><span>Un lugar para orar, escribir y llevar consigo lo que más importa en el día.</span></div>
+          <div class="metric"><strong>Caminar con otro</strong><span>Prácticas compartidas para crecer en la fe con una persona de confianza.</span></div>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div class="app-chip">
+          <img src="https://richcodestudio.com/apps/gracewell/assets/icon-gracewell-1024.png" alt="Ícono de Gracewell" />
+          <div>
+            <strong>Gracewell</strong>
+            <span>Oración, Escritura, diario y prácticas compartidas para la formación espiritual diaria.</span>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <h3>Ideal para</h3>
+            <p>Personas que desean volver a la oración y la Escritura con una estructura más suave y sostenible.</p>
+          </div>
+          <div class="card">
+            <h3>Por qué destaca</h3>
+            <p>Gracewell combina ritmo diario, guía, diario y prácticas compartidas sin sentirse como una app recargada.</p>
+          </div>
+          <div class="card">
+            <h3>Enlaces</h3>
+            <p><a href="https://richcodestudio.com/apps/gracewell/es/support/">Soporte</a><br /><a href="https://richcodestudio.com/apps/gracewell/es/privacy-policy/">Privacidad</a><br /><a href="https://richcodestudio.com/apps/gracewell/es/terms-conditions/">Términos</a></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-box">
+          <h2>Lo que Gracewell ayuda a formar</h2>
+          <p>Gracewell ofrece una manera práctica y serena de construir hábitos de oración, Escritura y reflexión en la vida diaria.</p>
+          <ul>
+            <li>Un ritmo diario de mañana, mediodía y noche.</li>
+            <li>Acceso a Escritura, oraciones, guía y diario en una sola app.</li>
+            <li>Prácticas compartidas para dos personas que quieren crecer en la fe juntas.</li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <h2>Qué incluye</h2>
+          <p>La experiencia está diseñada para ser clara, accesible y realmente útil para volver a Dios cada día.</p>
+          <ul>
+            <li>Lectura bíblica y pasajes seleccionados.</li>
+            <li>Diario, oraciones y la función Llevar Hoy.</li>
+            <li>Sesiones y caminos compartidos en Together.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="https://richcodestudio.com/apps/">Volver a todas las apps</a>
+    </footer>
+  </div>
+</body>
+</html>

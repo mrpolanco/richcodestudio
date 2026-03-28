@@ -1,55 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://richcodestudio.com/apps/onelane/">
-    <meta name="description" content="OneLane: Weekly Clarity helps busy, capable people pick one lane, take one step a day, and move forward without overwhelm.">
-    <meta name="keywords" content="OneLane app, weekly clarity app, focus app, reduce overwhelm, ADHD focus, decision fatigue, low pressure productivity app">
-    <meta name="author" content="Rich Code Studio">
-    <meta property="og:title" content="OneLane: Weekly Clarity | Rich Code Studio">
-    <meta property="og:description" content="Pick one lane this week. One prompt, one tool, one commitment per day. Clarity, not hustle.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://richcodestudio.com/apps/onelane/">
-    <meta property="og:image" content="https://richcodestudio.com/apps/onelane/assets/OneLane-icon.png">
-    <meta property="og:site_name" content="Rich Code Studio">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OneLane: Weekly Clarity | Rich Code Studio">
-    <meta name="twitter:description" content="Pick one lane this week. One prompt, one tool, one commitment per day. Clarity, not hustle.">
-    <meta name="twitter:image" content="https://richcodestudio.com/apps/onelane/assets/OneLane-icon.png">
-    <title>OneLane: Weekly Clarity | Rich Code Studio</title>
-    <style>
-        body { background:#14143F; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color:rgba(255,255,255,0.92); margin:0; min-height:100vh; line-height:1.6; }
-        .container { max-width:760px; margin:0 auto; padding:2rem 1rem 4rem; }
-        .back-link, .privacy-link { display:inline-block; color:rgba(255,255,255,0.85); text-decoration:none; font-weight:600; }
-        .back-link { margin-bottom:1.5rem; padding:0.5rem 0; }
-        .back-link:hover, .back-link:focus, .privacy-link:hover, .privacy-link:focus { opacity:0.78; text-decoration:underline; }
-        .back-link:focus, .privacy-link:focus, .store-badge:focus { outline:2px solid rgba(140,120,255,0.85); outline-offset:2px; border-radius:10px; }
-        .app-header { display:flex; align-items:center; gap:1.5rem; margin-bottom:2rem; }
-        .app-header img { width:104px; height:104px; border-radius:24px; box-shadow:0 14px 50px rgba(0,0,0,0.35); background:rgba(255,255,255,0.06); }
-        .app-title { font-size:2.1rem; font-weight:800; margin:0 0 0.35rem 0; letter-spacing:-0.02em; }
-        .app-subtitle { font-size:1.05rem; margin:0 0 1.25rem 0; color:rgba(255,255,255,0.72); }
-        .store-badge { display:inline-block; margin-bottom:1.25rem; transition:transform 0.25s ease; }
-        .store-badge:hover, .store-badge:focus { transform:scale(1.04); }
-        .pill { display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 0.75rem; border-radius:999px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.86); font-size:0.92rem; margin-right:0.5rem; margin-bottom:0.5rem; }
-        .section { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.10); border-radius:20px; box-shadow:0 20px 70px rgba(0,0,0,0.30); padding:2rem; margin-bottom:1.6rem; }
-        .section h2 { margin:0 0 0.75rem 0; font-size:1.7rem; letter-spacing:-0.01em; }
-        .section h3 { margin:1.75rem 0 0.8rem 0; font-size:1.25rem; color:rgba(255,255,255,0.90); }
-        .muted { color:rgba(255,255,255,0.70); }
-        .features-list { margin:1rem 0 0.75rem 0; padding-left:1.2rem; }
-        .features-list li { margin-bottom:0.7rem; color:rgba(255,255,255,0.86); }
-        .features-list strong { color:rgba(255,255,255,0.96); }
-        .quote { margin:1.25rem 0 0.5rem 0; padding:1.1rem; border-left:3px solid rgba(140,120,255,0.75); background:rgba(140,120,255,0.08); border-radius:14px; color:rgba(255,255,255,0.90); }
-        @media (max-width:640px){ .app-header{flex-direction:column;align-items:flex-start;} .app-header img{width:88px;height:88px;} .container{padding:1rem 0.75rem 2.5rem;} .app-title{font-size:1.85rem;} .section{padding:1.5rem;} }
-        @media (prefers-reduced-motion: reduce){ .store-badge:hover, .store-badge:focus{ transform:none; } }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneLane | Weekly clarity for busy, capable people | Rich Code Studio</title>
+  <meta name="description" content="OneLane is a weekly clarity app for people who need less noise, stronger focus, and a calmer way to decide what matters next." />
+  <link rel="canonical" href="https://richcodestudio.com/apps/onelane-clarity-app/" />
+  <meta property="og:title" content="OneLane | Rich Code Studio" />
+  <meta property="og:description" content="Weekly clarity for busy, capable people who need less noise and more focus." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://richcodestudio.com/apps/onelane-clarity-app/" />
+  <style>
+    :root {
+      --bg: #0d1422;
+      --panel: #111b2d;
+      --panel-soft: #16243b;
+      --text: #eef4ff;
+      --muted: #9db0ce;
+      --line: rgba(173, 196, 234, 0.14);
+      --accent: #77b7ff;
+      --accent-strong: #4da0ff;
+      --accent-soft: rgba(119, 183, 255, 0.13);
+      --shadow: 0 24px 52px rgba(1, 7, 17, 0.4);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --content: 1160px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--text); background: radial-gradient(circle at top, #16243b 0%, var(--bg) 58%); }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0 18px; }
+    .brand-title { font-size: 1.1rem; font-weight: 800; }
+    .brand-sub { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 3px; }
+    .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { padding: 10px 16px; border-radius: 999px; color: var(--muted); font-weight: 700; }
+    .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.08); color: var(--text); }
+    .hero { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
+    .hero-main, .hero-side { background: rgba(17,27,45,0.92); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); }
+    .hero-main { padding: 36px; }
+    .hero-side { padding: 28px; display: grid; gap: 18px; align-content: start; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.05em; margin: 18px 0 18px; }
+    .lead { color: var(--muted); font-size: 1.16rem; line-height: 1.75; max-width: 60ch; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; padding: 15px 22px; border-radius: 999px; font-weight: 800; }
+    .cta.primary { background: var(--accent-strong); color: white; }
+    .cta.secondary { background: rgba(255,255,255,0.04); border: 1px solid var(--line); color: var(--text); }
+    .metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 28px; }
+    .metric { padding: 18px; border-radius: var(--radius-lg); background: rgba(255,255,255,0.03); border: 1px solid var(--line); }
+    .metric strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+    .metric span { color: var(--muted); line-height: 1.55; }
+    .app-chip { display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: var(--radius-lg); background: rgba(255,255,255,0.03); border: 1px solid var(--line); }
+    .app-chip strong { font-size: 1.15rem; display: block; margin-bottom: 4px; }
+    .app-chip span { color: var(--muted); line-height: 1.5; }
+    .stack { display: grid; gap: 14px; }
+    .card { padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: rgba(255,255,255,0.03); }
+    .card h3 { margin: 0 0 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .section { padding: 22px 0 10px; }
+    .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+    .section-box { background: rgba(17,27,45,0.92); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; box-shadow: var(--shadow); }
+    .section-box h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 0 0 12px; letter-spacing: -0.04em; }
+    .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
+    ul { margin: 14px 0 0; padding-left: 18px; }
+    .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; }
+    @media (max-width: 900px) { .hero, .section-grid { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
+  </style>
 </head>
 <body>
-<main class="container">
-    <nav aria-label="App navigation"><a href="../index.html" class="back-link" aria-label="Back to apps list">&larr; Back to Apps List</a></nav>
-    <header class="app-header"><img src="assets/OneLane-icon.png" alt="OneLane app icon"><div><h1 class="app-title">OneLane: Weekly Clarity</h1><p class="app-subtitle">Pick one lane this week. One step a day. Then stop.</p><div aria-label="Positioning tags"><span class="pill">Clarity, not hustle</span><span class="pill">Reduce overwhelm</span><span class="pill">One lane per week</span></div><a class="store-badge" href="https://apps.apple.com/us/app/onelane-weekly-clarity/id6759357476" target="_blank" rel="noopener noreferrer" aria-label="Download OneLane on the App Store"><img src="assets/available-on-the-app-store_150x50.png" alt="Available on the App Store"></a></div></header>
-    <section class="section" aria-labelledby="app-description"><h2 id="app-description">A weekly reset for people carrying too much at once.</h2><p class="muted">OneLane is for overwhelmed weeks, scattered attention, and decision fatigue. It helps you choose one area that matters, move it forward a little each day, and stop before productivity turns into self-punishment.</p><div class="quote" aria-label="OneLane promise"><strong>Pick one thing. Move it forward. That’s enough.</strong></div><h3>What it does</h3><ul class="features-list"><li><strong>One lane per week:</strong> Choose the one area that needs attention right now.</li><li><strong>One prompt per day:</strong> A sharp question that cuts through the noise.</li><li><strong>One short tool:</strong> Reset, Clarity, or Commit, matched to how you’re stuck.</li><li><strong>One concrete move:</strong> Name it, lock it in, and close the loop.</li><li><strong>A calm finish:</strong> When you’ve moved your lane forward, you’re done for the day.</li></ul><h3>Built for real life</h3><ul class="features-list"><li><strong>No streak pressure.</strong> No guilt loops.</li><li><strong>No productivity overload.</strong> No 12 competing goals.</li><li><strong>Designed for decision fatigue:</strong> one thing, one step, done.</li></ul><h3>Who it’s for</h3><ul class="features-list"><li>High-achievers who feel spread too thin</li><li>Founders carrying too much alone</li><li>Adults with ADHD who overcommit</li><li>Professionals stuck in decision fatigue</li><li>Anyone busy but directionless</li></ul><p class="muted">OneLane includes an optional subscription for ongoing weekly clarity support and adaptive prompts.</p><p class="muted">No ads. No data selling. Just structure.</p></section>
-    <section class="section" aria-labelledby="privacy-and-support"><h2 id="privacy-and-support">Privacy & Support</h2><p class="muted">Your clarity is personal. We keep the experience calm, minimal, and respectful.</p><a class="privacy-link" href="privacy-policy/index.html" aria-label="View app privacy policy">App Privacy Policy</a><br><a class="privacy-link" href="support/index.html" aria-label="Get app support">App Support</a></section>
-    <footer class="muted" style="padding:0.5rem 0 0 0;">© <span id="year"></span> Rich Code Studio</footer>
-</main><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>
+  <div class="shell">
+    <nav class="nav">
+      <a href="https://richcodestudio.com/" aria-label="Rich Code Studio home">
+        <div class="brand-title">Rich Code Studio</div>
+        <div class="brand-sub">iOS Product Studio</div>
+      </a>
+      <div class="nav-links">
+        <a href="https://richcodestudio.com/">Home</a>
+        <a href="https://richcodestudio.com/about.html">About</a>
+        <a href="https://richcodestudio.com/apps/" class="active">Apps</a>
+        <a href="https://richcodestudio.com/contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Weekly clarity</div>
+        <h1>Find the one lane worth protecting this week.</h1>
+        <p class="lead">OneLane is a weekly clarity app for busy, capable people who do not need more noise. It helps you step back, name what matters, and move into the next week with less mental clutter and stronger focus.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="https://apps.apple.com/us/app/onelane-weekly-clarity/id6759357476">Download on the App Store</a>
+          <a class="cta secondary" href="https://richcodestudio.com/apps/">Explore other apps</a>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>Weekly reset</strong><span>Step out of reactive busyness and regain a clear sense of what deserves attention.</span></div>
+          <div class="metric"><strong>Less noise</strong><span>Designed to reduce overcommitment instead of layering on more productivity pressure.</span></div>
+          <div class="metric"><strong>Clear next step</strong><span>Move forward with one lane that is realistic, meaningful, and easier to protect.</span></div>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div class="app-chip">
+          <div>
+            <strong>OneLane</strong>
+            <span>A weekly clarity ritual for busy people who want less noise and more focus.</span>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <h3>Best for</h3>
+            <p>Professionals, founders, and thoughtful people who feel pulled in too many directions and want calmer decision-making.</p>
+          </div>
+          <div class="card">
+            <h3>Why it stands out</h3>
+            <p>OneLane is less about doing more and more about recovering the clarity to choose well.</p>
+          </div>
+          <div class="card">
+            <h3>App Store</h3>
+            <p><a href="https://apps.apple.com/us/app/onelane-weekly-clarity/id6759357476">View OneLane on the App Store</a></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-box">
+          <h2>What OneLane helps you do</h2>
+          <p>OneLane gives you a dedicated place to slow down, review your current load, and name the one priority that deserves the clearest energy this week.</p>
+          <ul>
+            <li>Reduce decision fatigue through a simpler weekly rhythm.</li>
+            <li>Step away from scattered commitments and regain focus.</li>
+            <li>Choose a lane that fits the season you are actually in.</li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <h2>Who it is for</h2>
+          <p>This app is for capable people who already care deeply, but need a more honest and sustainable way to move forward.</p>
+          <ul>
+            <li>People feeling overextended or mentally noisy.</li>
+            <li>Users who want reflection without a heavy journaling system.</li>
+            <li>Anyone who values calm, focus, and weekly clarity.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="https://richcodestudio.com/apps/">Back to all apps</a>
+    </footer>
+  </div>
+</body>
+</html>

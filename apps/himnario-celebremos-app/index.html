@@ -1,28 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://richcodestudio.com/apps/himnario-celebremos-app/">
-    <meta name="description" content="Himnario Celebremos is a digital Christian hymnal for churches, worship teams, and families, with searchable hymn lyrics, favorites, and a worship-friendly experience.">
-    <meta name="keywords" content="Himnario Celebremos, Christian hymnal app, hymn lyrics app, worship app, church hymns, digital hymnal iPhone app">
-    <meta name="author" content="Rich Code Studio">
-    <meta property="og:title" content="Himnario Celebremos | Digital Christian Hymnal">
-    <meta property="og:description" content="A digital Christian hymnal for churches, worship teams, and families who want hymn lyrics close at hand.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://richcodestudio.com/apps/himnario-celebremos-app/">
-    <meta property="og:image" content="https://richcodestudio.com/apps/himnario-celebremos-app/assets/icon.png">
-    <meta property="og:site_name" content="Rich Code Studio">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Himnario Celebremos | Digital Christian Hymnal">
-    <meta name="twitter:description" content="A digital Christian hymnal for churches, worship teams, and families who want hymn lyrics close at hand.">
-    <meta name="twitter:image" content="https://richcodestudio.com/apps/himnario-celebremos-app/assets/icon.png">
-    <title>Himnario Celebremos | Digital Christian Hymnal</title>
-    <style>
-        body { background:#f0e7fb; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color:#2c2240; margin:0; min-height:100vh; line-height:1.6; }
-        .container{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem;} .back-link,.privacy-link{display:inline-block;color:#6a4ba2;text-decoration:none;font-weight:600;} .back-link{margin-bottom:1.5rem;padding:0.5rem 0;} .back-link:hover,.back-link:focus,.privacy-link:hover,.privacy-link:focus{color:#4f3b77;text-decoration:underline;} .back-link:focus,.privacy-link:focus,.store-badge:focus{outline:2px solid #764ba2;outline-offset:2px;border-radius:10px;} .app-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;} .app-header img{width:100px;height:100px;border-radius:24px;box-shadow:0 14px 40px rgba(98,79,144,0.18);background:white;} .app-title{font-size:2.2rem;font-weight:800;color:#33264b;margin-bottom:0.3rem;} .app-subtitle{font-size:1.05rem;color:#5a4e6d;margin-bottom:1.2rem;} .store-badge{display:inline-block;margin-bottom:1.2rem;transition:transform 0.25s ease;} .store-badge:hover,.store-badge:focus{transform:scale(1.04);} .pill{display:inline-flex;align-items:center;gap:0.45rem;padding:0.4rem 0.72rem;border-radius:999px;background:rgba(118,75,162,0.1);border:1px solid rgba(118,75,162,0.16);color:#6a4ba2;font-size:0.9rem;font-weight:700;margin-right:0.5rem;margin-bottom:0.5rem;} .section{background:white;border-radius:22px;box-shadow:0 18px 60px rgba(98,79,144,0.09);padding:2rem;margin-bottom:1.6rem;border:1px solid rgba(118,75,162,0.08);} .section h2{color:#563b87;margin-top:0;font-size:1.75rem;} .section h3{color:#563b87;font-size:1.25rem;margin-top:1.6rem;margin-bottom:0.8rem;} .features-list{margin:1rem 0 0.75rem;padding-left:1.2rem;} .features-list li{margin-bottom:0.7rem;color:#574d68;} .quote{margin:1.1rem 0 0.5rem;padding:1rem 1.05rem;border-left:3px solid #b18cf0;background:rgba(177,140,240,0.08);border-radius:14px;color:#46365f;} .muted{color:#6a6178;} @media (max-width:640px){.app-header{flex-direction:column;align-items:flex-start;} .app-header img{width:84px;height:84px;} .container{padding:1rem 0.75rem 2.5rem;} .app-title{font-size:1.85rem;} .section{padding:1.4rem;}} @media (prefers-reduced-motion: reduce){.store-badge:hover,.store-badge:focus{transform:none;}}
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Himnario Celebremos | Spanish hymn lyrics for worship services | Rich Code Studio</title>
+  <meta name="description" content="Himnario Celebremos provides Spanish hymn lyrics and worship songs in a clean, accessible app for church services, rehearsals, and personal use." />
+  <link rel="canonical" href="https://richcodestudio.com/apps/himnario-celebremos-app/" />
+  <link rel="alternate" hreflang="es" href="https://richcodestudio.com/apps/himnario-celebremos/" />
+  <style>
+    :root {
+      --bg: #f7f2fb;
+      --panel: #ffffff;
+      --panel-soft: #f4ecfb;
+      --text: #231a33;
+      --muted: #77688f;
+      --line: #eadcf8;
+      --accent: #8a52d7;
+      --accent-strong: #7b42c8;
+      --accent-soft: #f1e6ff;
+      --shadow: 0 20px 45px rgba(79, 40, 133, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --content: 1160px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--text); background: linear-gradient(180deg, #fbf8ff 0%, var(--bg) 100%); }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0 18px; }
+    .brand-title { font-size: 1.1rem; font-weight: 800; }
+    .brand-sub { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 3px; }
+    .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { padding: 10px 16px; border-radius: 999px; color: var(--muted); font-weight: 700; }
+    .nav-links a:hover, .nav-links a.active { background: var(--panel); color: var(--text); box-shadow: var(--shadow); }
+    .hero { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
+    .hero-main, .hero-side { background: rgba(255,255,255,0.9); border: 1px solid rgba(234,220,248,0.9); border-radius: var(--radius-xl); box-shadow: var(--shadow); }
+    .hero-main { padding: 36px; }
+    .hero-side { padding: 28px; display: grid; gap: 18px; align-content: start; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.05em; margin: 18px 0 18px; }
+    .lead { color: var(--muted); font-size: 1.16rem; line-height: 1.75; max-width: 60ch; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; padding: 15px 22px; border-radius: 999px; font-weight: 800; }
+    .cta.primary { background: var(--accent); color: white; }
+    .cta.secondary { background: var(--panel); border: 1px solid var(--line); color: var(--text); }
+    .metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 28px; }
+    .metric { padding: 18px; border-radius: var(--radius-lg); background: var(--panel); border: 1px solid var(--line); }
+    .metric strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+    .metric span { color: var(--muted); line-height: 1.55; }
+    .app-chip { display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: var(--radius-lg); background: var(--panel); border: 1px solid var(--line); }
+    .app-chip strong { font-size: 1.15rem; display: block; margin-bottom: 4px; }
+    .app-chip span { color: var(--muted); line-height: 1.5; }
+    .stack { display: grid; gap: 14px; }
+    .card { padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--panel); }
+    .card h3 { margin: 0 0 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .section { padding: 22px 0 10px; }
+    .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+    .section-box { background: rgba(255,255,255,0.9); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; box-shadow: var(--shadow); }
+    .section-box h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 0 0 12px; letter-spacing: -0.04em; }
+    .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
+    ul { margin: 14px 0 0; padding-left: 18px; }
+    .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; }
+    @media (max-width: 900px) { .hero, .section-grid { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
+  </style>
 </head>
 <body>
-<main class="container"><nav aria-label="App navigation"><a href="../index.html" class="back-link" aria-label="Back to apps list">&larr; Back to Apps List</a></nav><header class="app-header"><img src="assets/icon.png" alt="Himnario Celebremos app icon"><div><h1 class="app-title">Himnario Celebremos</h1><p class="app-subtitle">A digital Christian hymnal for churches, worship teams, and families.</p><div aria-label="Positioning tags"><span class="pill">Worship ready</span><span class="pill">Hymn lyrics</span><span class="pill">Church friendly</span></div><a class="store-badge" href="https://apps.apple.com/us/app/himnario-celebremos/id6746585048" target="_blank" rel="noopener noreferrer" aria-label="Download Himnario Celebremos on the App Store"><img src="assets/available-on-the-app-store_150x50.png" alt="Available on the App Store"></a></div></header><section class="section" aria-labelledby="app-description"><h2 id="app-description">Keep the hymns you sing close at hand.</h2><p class="muted">Himnario Celebremos brings a worship-focused hymn library to iPhone, making it easier to find lyrics, revisit favorites, and keep a trusted collection of hymns available for church gatherings, family devotion, and personal worship.</p><div class="quote"><strong>A hymn library designed to feel simple, familiar, and ready when worship begins.</strong></div><h3>What it includes</h3><ul class="features-list"><li><strong>Complete hymn access:</strong> browse a large collection of Christian hymns in one place.</li><li><strong>Favorites and quick return:</strong> save the hymns you come back to most.</li><li><strong>Search and browse:</strong> find hymns by title, lyrics, or number.</li><li><strong>Worship-friendly reading:</strong> a simple interface built for quick access during real use.</li></ul><h3>Best for</h3><ul class="features-list"><li>Churches and congregations</li><li>Christian families</li><li>Worship leaders and musicians</li><li>Students and teachers who need hymn lyrics close by</li></ul><p class="muted">Himnario Celebremos is built to support worship, not distract from it.</p></section><section class="section" aria-labelledby="privacy-and-support"><h2 id="privacy-and-support">Privacy & Support</h2><p class="muted">Need help, support details, or the app privacy policy? Use the links below.</p><a class="privacy-link" href="privacy-policy/index.html" aria-label="View app privacy policy">App Privacy Policy</a><br><a class="privacy-link" href="support/index.html" aria-label="Get app support">App Support</a></section></main></body></html>
+  <div class="shell">
+    <nav class="nav">
+      <a href="https://richcodestudio.com/" aria-label="Rich Code Studio home">
+        <div class="brand-title">Rich Code Studio</div>
+        <div class="brand-sub">iOS Product Studio</div>
+      </a>
+      <div class="nav-links">
+        <a href="https://richcodestudio.com/">Home</a>
+        <a href="https://richcodestudio.com/about.html">About</a>
+        <a href="https://richcodestudio.com/apps/" class="active">Apps</a>
+        <a href="https://richcodestudio.com/contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Spanish worship lyrics</div>
+        <h1>Bring hymn and worship lyrics into every service more simply.</h1>
+        <p class="lead">Himnario Celebremos is a Spanish hymn and worship lyrics app built for churches, worship teams, rehearsals, and personal devotion. It gives congregations and leaders a cleaner, more accessible way to find and use lyrics when they need them.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="https://apps.apple.com/us/app/himnario-celebremos/id6746585048">Download on the App Store</a>
+          <a class="cta secondary" href="https://richcodestudio.com/apps/himnario-celebremos/">Ver en español</a>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>Built for worship use</strong><span>Useful for services, rehearsals, musicians, and congregational singing.</span></div>
+          <div class="metric"><strong>Simple lyric access</strong><span>Find the song you need without the clutter of a heavier media system.</span></div>
+          <div class="metric"><strong>Spanish-first experience</strong><span>Created for Spanish-speaking worship settings that need dependable lyric access.</span></div>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div class="app-chip">
+          <div>
+            <strong>Himnario Celebremos</strong>
+            <span>Spanish hymn lyrics and worship songs for services, rehearsals, and personal use.</span>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <h3>Best for</h3>
+            <p>Church leaders, worship teams, musicians, and congregations that want easier access to lyrics in Spanish.</p>
+          </div>
+          <div class="card">
+            <h3>Why it stands out</h3>
+            <p>It is built around usefulness in worship contexts instead of trying to be a bloated media platform.</p>
+          </div>
+          <div class="card">
+            <h3>Language</h3>
+            <p><a href="https://richcodestudio.com/apps/himnario-celebremos/">Spanish page</a></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-box">
+          <h2>What it helps you do</h2>
+          <p>Himnario Celebremos makes it easier to access lyrics in the moments that matter, whether you are preparing for worship, practicing with a team, or singing devotionally on your own.</p>
+          <ul>
+            <li>Find lyrics quickly during services or rehearsals.</li>
+            <li>Reduce friction for Spanish-speaking worship teams.</li>
+            <li>Keep the focus on singing, not searching.</li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <h2>Who it is for</h2>
+          <p>This app is built for churches and worshipers who need dependable, accessible Spanish lyric support in daily ministry use.</p>
+          <ul>
+            <li>Worship teams and church musicians.</li>
+            <li>Congregations using Spanish hymn and worship lyrics.</li>
+            <li>Individuals who want lyrical access for personal devotion.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="https://richcodestudio.com/apps/">Back to all apps</a>
+    </footer>
+  </div>
+</body>
+</html>
