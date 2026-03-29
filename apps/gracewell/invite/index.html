@@ -208,9 +208,9 @@
     <section class="card">
       <p class="section-title" data-i18n="invite.landing.footer"></p>
       <ul class="benefit-list">
-        <li data-i18n="invite.accept.benefit.prayers"></li>
-        <li data-i18n="invite.accept.benefit.sessions"></li>
-        <li data-i18n="invite.accept.benefit.paths"></li>
+        <li data-i18n="invite.accept.benefit_prayers"></li>
+        <li data-i18n="invite.accept.benefit_sessions"></li>
+        <li data-i18n="invite.accept.benefit_paths"></li>
       </ul>
     </section>
 
@@ -453,7 +453,10 @@
       const tokenFromPath = inviteIndex >= 0 && inviteIndex + 1 < pathParts.length
         ? pathParts[inviteIndex + 1]
         : null;
-      const inviteToken = tokenFromQuery || tokenFromPath;
+      const sanitizedTokenFromPath = tokenFromPath && tokenFromPath !== "index.html"
+        ? tokenFromPath
+        : null;
+      const inviteToken = tokenFromQuery || sanitizedTokenFromPath;
       const inviteCode = code || inviteToken;
 
       const heroTitle = document.getElementById("heroTitle");
