@@ -203,6 +203,7 @@
       <p class="label" data-i18n="invite.landing.code_label"></p>
       <div id="inviteCode" class="invite-code">ABCD-1234</div>
       <p id="codeHelper" class="helper" data-i18n="invite.landing.code_helper"></p>
+      <p id="expiryStatus" class="helper hidden"></p>
     </section>
 
     <section class="card">
@@ -240,11 +241,15 @@
         "landing": {
           "title": "You’ve been invited to Gracewell Together",
           "subtitle": "Shared prayer, reflection, and spiritual growth for two.",
+          "expired_title": "This invitation has expired",
+          "expired_subtitle": "Ask the sender to share a new Gracewell Together invitation link.",
           "download": "Download Gracewell",
           "copy_code": "Copy Invite Code",
           "open_app": "Open Gracewell",
           "code_label": "Your invite code",
           "code_helper": "Already installed? Open Gracewell and use this code in Together.",
+          "expires_on": "Invite expires %@",
+          "expired_on": "Expired %@",
           "footer": "You’ll be able to share prayers, begin sessions together, and follow shared paths.",
           "already_installed_short": "Already installed?",
           "open_instead": "Open Gracewell instead"
@@ -322,11 +327,15 @@
         "landing": {
           "title": "Le han invitado a Gracewell Together",
           "subtitle": "Oración compartida, reflexión y crecimiento espiritual para dos.",
+          "expired_title": "Esta invitación ha expirado",
+          "expired_subtitle": "Pida a quien la envió que comparta un nuevo enlace de invitación de Gracewell Together.",
           "download": "Descargar Gracewell",
           "copy_code": "Copiar código de invitación",
           "open_app": "Abrir Gracewell",
           "code_label": "Su código de invitación",
           "code_helper": "¿Ya tiene la app? Abra Gracewell y use este código en Together.",
+          "expires_on": "La invitación expira %@",
+          "expired_on": "Expiró %@",
           "footer": "Podrán compartir oraciones, comenzar sesiones juntos y seguir caminos compartidos.",
           "already_installed_short": "¿Ya tiene la app?",
           "open_instead": "Abrir Gracewell"
@@ -435,6 +444,12 @@
       return I18N.t(path, replacements);
     }
 
+    function askForNewInviteLink(locale) {
+      window.location.href = locale === "es"
+        ? "mailto:?subject=Invitación%20de%20Gracewell&body=¿Podría%20compartir%20de%20nuevo%20la%20invitación%20de%20Gracewell?"
+        : "mailto:?subject=Gracewell%20invite&body=Please%20send%20the%20Gracewell%20invitation%20again.";
+    }
+
     (function initInvitePage() {
       const locale = detectLocale();
       window.localStorage.setItem("gw_lang", locale);
@@ -448,6 +463,7 @@
       const code = params.get("code");
       const tokenFromQuery = params.get("token");
       const inviter = params.get("inviter") || params.get("from");
+      const expires = Number(params.get("expires"));
       const pathParts = window.location.pathname.split("/").filter(Boolean);
       const inviteIndex = pathParts.lastIndexOf("invite");
       const tokenFromPath = inviteIndex >= 0 && inviteIndex + 1 < pathParts.length
@@ -464,10 +480,15 @@
       const inviteCodeCard = document.getElementById("inviteCodeCard");
       const inviteCodeElement = document.getElementById("inviteCode");
       const codeHelper = document.getElementById("codeHelper");
+      const expiryStatus = document.getElementById("expiryStatus");
       const copyButton = document.getElementById("copyCodeButton");
       const openAppLink = document.getElementById("openAppLink");
+      const hasExpiry = Number.isFinite(expires) && expires > 0;
+      const expiryDate = hasExpiry ? new Date(expires * 1000) : null;
+      const isExpired = expiryDate ? Date.now() >= expiryDate.getTime() : false;
+      const expiryFormatter = new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeStyle: "short" });
 
-      if (inviter) {
+      if (inviter && !isExpired) {
         heroSubtitle.textContent = tFormat("invite.accept.subtitle", decodeURIComponent(inviter));
       }
 
@@ -479,16 +500,29 @@
         copyButton.textContent = I18N.t("invite.invalid.secondary");
         openAppLink.textContent = I18N.t("invite.landing.open_instead");
         openAppLink.href = "gracewell://invite/";
-        copyButton.onclick = () => {
-          window.location.href = locale === "es"
-            ? "mailto:?subject=Invitación%20de%20Gracewell&body=¿Podría%20compartir%20de%20nuevo%20la%20invitación%20de%20Gracewell?"
-            : "mailto:?subject=Gracewell%20invite&body=Please%20send%20the%20Gracewell%20invitation%20again.";
-        };
+        copyButton.onclick = () => askForNewInviteLink(locale);
         return;
       }
 
       inviteCodeElement.textContent = inviteCode;
       openAppLink.href = `gracewell://invite/${encodeURIComponent(inviteCode)}`;
+
+      if (expiryDate && expiryStatus) {
+        expiryStatus.classList.remove("hidden");
+        const formattedExpiry = expiryFormatter.format(expiryDate);
+        expiryStatus.textContent = isExpired
+          ? tFormat("invite.landing.expired_on", formattedExpiry)
+          : tFormat("invite.landing.expires_on", formattedExpiry);
+      }
+
+      if (isExpired) {
+        heroTitle.textContent = I18N.t("invite.landing.expired_title");
+        heroSubtitle.textContent = I18N.t("invite.landing.expired_subtitle");
+        codeHelper.textContent = I18N.t("invite.accept.error_expired");
+        copyButton.textContent = I18N.t("invite.invalid.secondary");
+        copyButton.onclick = () => askForNewInviteLink(locale);
+        return;
+      }
 
       copyButton.onclick = async () => {
         try {
