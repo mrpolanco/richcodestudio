@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arrive Japan | Offline Japanese travel phrases and guide | Rich Code Studio</title>
+  <meta name="description" content="Arrive Japan helps first-time travelers learn survival Japanese, decode signs, practice phrases, and prepare for Japan offline." />
+  <link rel="canonical" href="https://richcodestudio.com/apps/arrive-japan/" />
+  <meta property="og:title" content="Arrive Japan | Rich Code Studio" />
+  <meta property="og:description" content="Offline Japanese travel phrases, sign help, pronunciation practice, and trip-ready learning for Japan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://richcodestudio.com/apps/arrive-japan/" />
+  <meta property="og:image" content="https://richcodestudio.com/apps/arrive-japan/assets/icon.png" />
+  <style>
+    :root {
+      --bg: #f5f7f2;
+      --panel: #ffffff;
+      --panel-soft: #eef4ec;
+      --text: #18251e;
+      --muted: #637166;
+      --line: rgba(67, 98, 70, 0.16);
+      --accent: #d9472b;
+      --accent-strong: #b93622;
+      --accent-soft: #fff0ec;
+      --green: #2f6c4f;
+      --shadow: 0 22px 52px rgba(26, 49, 35, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --content: 1160px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--text); background: linear-gradient(180deg, #fffaf4 0%, var(--bg) 100%); }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0 18px; }
+    .brand-title { font-size: 1.1rem; font-weight: 800; }
+    .brand-sub { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 3px; }
+    .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { padding: 10px 16px; border-radius: 999px; color: var(--muted); font-weight: 700; }
+    .nav-links a:hover, .nav-links a.active { background: var(--panel); color: var(--text); box-shadow: var(--shadow); }
+    .hero { display: grid; grid-template-columns: 1.18fr 0.82fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
+    .hero-main, .hero-side { background: rgba(255,255,255,0.92); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); }
+    .hero-main { padding: 36px; }
+    .hero-side { padding: 28px; display: grid; gap: 18px; align-content: start; }
+    .eyebrow { display: inline-flex; padding: 9px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.05em; margin: 18px 0; }
+    .lead { color: var(--muted); font-size: 1.16rem; line-height: 1.75; max-width: 62ch; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; padding: 15px 22px; border-radius: 999px; font-weight: 800; }
+    .cta.primary { background: var(--accent); color: white; }
+    .cta.secondary { background: var(--panel); border: 1px solid var(--line); color: var(--text); }
+    .metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 28px; }
+    .metric { padding: 18px; border-radius: var(--radius-lg); background: var(--panel-soft); border: 1px solid var(--line); }
+    .metric strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+    .metric span { color: var(--muted); line-height: 1.55; }
+    .app-chip { display: flex; gap: 12px; align-items: center; padding: 16px; border-radius: var(--radius-lg); background: var(--panel-soft); border: 1px solid var(--line); }
+    .app-chip img { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; flex-shrink: 0; box-shadow: 0 6px 16px rgba(26,49,35,0.18); }
+    .app-chip strong { font-size: 1.15rem; display: block; margin-bottom: 4px; }
+    .app-chip span { color: var(--muted); line-height: 1.5; }
+    .screenshot-panel { display: grid; place-items: center; padding: 12px; border-radius: var(--radius-xl); background: #f8e7df; border: 1px solid rgba(217,71,43,0.18); }
+    .screenshot-panel img { width: min(100%, 340px); height: auto; display: block; border-radius: 28px; box-shadow: var(--shadow); }
+    .stack { display: grid; gap: 14px; }
+    .card { padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--panel); }
+    .card h3 { margin: 0 0 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green); }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .section { padding: 22px 0 10px; }
+    .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+    .section-box { background: rgba(255,255,255,0.92); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; box-shadow: var(--shadow); }
+    .section-box h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 0 0 12px; letter-spacing: -0.04em; }
+    .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
+    .shots { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
+    .shot { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 12px; box-shadow: var(--shadow); }
+    .shot img { width: 100%; border-radius: 18px; display: block; }
+    ul { margin: 14px 0 0; padding-left: 18px; }
+    .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; display: flex; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 900px) { .hero, .section-grid, .shots { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav">
+      <a href="https://richcodestudio.com/" aria-label="Rich Code Studio home">
+        <div class="brand-title">Rich Code Studio</div>
+        <div class="brand-sub">iOS Product Studio</div>
+      </a>
+      <div class="nav-links">
+        <a href="https://richcodestudio.com/">Home</a>
+        <a href="https://richcodestudio.com/about.html">About</a>
+        <a href="https://richcodestudio.com/apps/" class="active">Apps</a>
+        <a href="https://richcodestudio.com/contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Offline travel Japanese</div>
+        <h1>Land in Japan with the phrases you need already in your pocket.</h1>
+        <p class="lead">Arrive Japan helps first-time travelers prepare for real moments in Japan: airports, trains, restaurants, hotels, convenience stores, signs, pronunciation, and emergency phrases. Learn before you go, then keep using it offline when Wi-Fi is not a promise.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="mailto:richcodestudios@gmail.com?subject=Arrive%20Japan%20App%20Store%20launch">Request launch notice</a>
+          <a class="cta secondary" href="support/">Support</a>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>Offline first</strong><span>Phrasebook, lessons, search, audio, and practical travel help are built for unreliable connectivity.</span></div>
+          <div class="metric"><strong>Travel context</strong><span>Vocabulary and phrases are organized around the situations travelers actually face.</span></div>
+          <div class="metric"><strong>N5 foundations</strong><span>Practical phrases connect naturally to kana, kanji, vocabulary, and grammar basics.</span></div>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div class="app-chip">
+          <img src="assets/icon.png" alt="Arrive Japan app icon" />
+          <div>
+            <strong>Arrive Japan</strong>
+            <span>Offline travel phrases, sign help, and Japanese learning for your first trip.</span>
+          </div>
+        </div>
+        <div class="screenshot-panel">
+          <img src="assets/home.png" alt="Arrive Japan home screen" loading="lazy" />
+        </div>
+        <div class="stack">
+          <div class="card">
+            <h3>Best for</h3>
+            <p>First-time Japan travelers, language learners, families preparing a trip, and anyone who wants survival Japanese ready before landing.</p>
+          </div>
+          <div class="card">
+            <h3>Why it stands out</h3>
+            <p>It is a travel preparation app first: practical phrases, pronunciation, signs, and study paths stay tied to real situations.</p>
+          </div>
+          <div class="card">
+            <h3>Legal</h3>
+            <p><a href="privacy-policy/">Privacy Policy</a> · <a href="terms-of-service/">Terms of Service</a></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-box">
+          <h2>Learn before you go</h2>
+          <p>Arrive Japan builds a practical route through survival phrases and beginner Japanese, with daily review designed around your trip timeline.</p>
+          <ul>
+            <li>Hiragana and katakana drills with spaced repetition.</li>
+            <li>Slow audio and pronunciation practice for common phrases.</li>
+            <li>N5 vocabulary, kanji, and grammar in travel context.</li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <h2>Use it in Japan</h2>
+          <p>When you are already there, the app focuses on quick, practical help: what to say, what a sign means, and what to do next.</p>
+          <ul>
+            <li>Quick Speak emergency and help phrases.</li>
+            <li>Airport, train, restaurant, hotel, and convenience store support.</li>
+            <li>Manual sign lookup and camera-based sign scanning.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="shots" aria-label="Arrive Japan screenshots">
+        <div class="shot"><img src="assets/now-in-japan.png" alt="Now in Japan travel mode screen" loading="lazy" /></div>
+        <div class="shot"><img src="assets/practical-guides.png" alt="Practical Japan guides screen" loading="lazy" /></div>
+        <div class="shot"><img src="assets/pronunciation-listening.png" alt="Pronunciation and listening practice screen" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="https://richcodestudio.com/apps/">Back to all apps</a>
+      <a href="support/">Support</a>
+      <a href="privacy-policy/">Privacy Policy</a>
+      <a href="terms-of-service/">Terms of Service</a>
+    </footer>
+  </div>
+</body>
+</html>
