@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://richcodestudio.com/">
-    <meta name="description" content="Rich Code Studio builds thoughtful iOS apps and digital products, including Gracewell, OneLane, Himnario Celebremos, and Stagewell.">
-    <meta name="keywords" content="Rich Code Studio, iOS app studio, SwiftUI app development, mobile product studio, Christian prayer app, wellness app, productivity app">
+    <meta name="description" content="Rich Code Studio builds thoughtful iOS apps and digital products, including Gracewell, Arrive Japan, OneLane, Himnario Celebremos, and Stagewell.">
+    <meta name="keywords" content="Rich Code Studio, iOS app studio, SwiftUI app development, mobile product studio, Christian prayer app, Japanese travel app, wellness app, productivity app">
     <meta name="author" content="Rich Code Studio">
     <meta property="og:title" content="Rich Code Studio | Thoughtful iOS Apps and Product Design">
     <meta property="og:description" content="We build calm, focused iPhone apps with strong product thinking, clean design, and launch-ready execution.">
@@ -148,6 +148,8 @@
         .app-brief { display: grid; grid-template-columns: 56px 1fr; gap: 0.85rem; align-items: center; padding: 0.85rem; border-radius: 18px; background: rgba(255,255,255,0.76); border: 1px solid rgba(148, 117, 57, 0.09); text-decoration: none; }
         .app-brief img, .app-brief-badge { width: 56px; height: 56px; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 16px rgba(59, 50, 33, 0.12); }
         .app-brief-badge { display: grid; place-items: center; background: linear-gradient(135deg, #243047, #4b5c81); color: white; font-weight: 800; }
+        .app-title-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .status-tag { display: inline-flex; align-items: center; border-radius: 999px; padding: 0.18rem 0.5rem; color: var(--accent-deep); background: rgba(201, 169, 90, 0.14); border: 1px solid rgba(201, 169, 90, 0.2); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
         .section-wrap { margin-top: 3rem; }
         .section-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; margin: 1rem 0 1.9rem; }
         .section-card { padding: 1.5rem; }
@@ -230,7 +232,11 @@
                     <div class="apps-list">
                         <a class="app-brief" href="https://gracewell.app/">
                             <img src="apps/assets/gracewell-icon.png" alt="Gracewell app icon">
-                            <div><strong>Gracewell</strong><p>Prayer, Scripture, journaling, and gentle spiritual rhythms.</p></div>
+                            <div><div class="app-title-row"><strong>Gracewell</strong><span class="status-tag">Coming Soon</span></div><p>Prayer, Scripture, journaling, and gentle spiritual rhythms.</p></div>
+                        </a>
+                        <a class="app-brief" href="apps/arrive-japan/index.html">
+                            <img src="apps/assets/arrive-japan-icon.png" alt="Arrive Japan app icon">
+                            <div><div class="app-title-row"><strong>Arrive Japan</strong><span class="status-tag">Coming Soon</span></div><p>Offline travel Japanese, phrase help, and trip-ready learning.</p></div>
                         </a>
                         <a class="app-brief" href="apps/onelane-clarity-app/index.html">
                             <img src="apps/onelane-clarity-app/assets/OneLane-icon.png" alt="OneLane app icon">
@@ -287,10 +293,18 @@
                 <article class="app-card">
                     <img src="apps/assets/gracewell-shot.png" alt="Gracewell app screenshot" class="app-shot">
                     <img src="apps/assets/gracewell-icon.png" alt="Gracewell app icon" class="app-icon">
-                    <h3>Gracewell</h3>
+                    <div class="app-title-row"><h3>Gracewell</h3><span class="status-tag">Coming Soon</span></div>
                     <p>Prayer, Scripture, journaling, guided reflection, and shared spiritual rhythms in one calm formation app.</p>
                     <div class="tag-row"><span class="tag">Prayer rhythm</span><span class="tag">Scripture</span><span class="tag">Together</span></div>
                     <p><a href="https://gracewell.app/" class="btn btn-secondary" style="margin-top: 1rem;">View Gracewell</a></p>
+                </article>
+                <article class="app-card">
+                    <img src="apps/assets/arrive-japan-shot.png" alt="Arrive Japan app screenshot" class="app-shot">
+                    <img src="apps/assets/arrive-japan-icon.png" alt="Arrive Japan app icon" class="app-icon">
+                    <div class="app-title-row"><h3>Arrive Japan</h3><span class="status-tag">Coming Soon</span></div>
+                    <p>Offline Japanese travel phrases, pronunciation practice, sign help, and trip-ready learning for first-time visitors.</p>
+                    <div class="tag-row"><span class="tag">Travel Japanese</span><span class="tag">Offline phrases</span><span class="tag">Japan guide</span></div>
+                    <p><a href="apps/arrive-japan/index.html" class="btn btn-secondary" style="margin-top: 1rem;">View Arrive Japan</a></p>
                 </article>
                 <article class="app-card">
                     <img src="apps/assets/onelane-shot.png" alt="OneLane app screenshot" class="app-shot">
