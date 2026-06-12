@@ -39,7 +39,10 @@
     .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
     .nav-links a { padding: 10px 16px; border-radius: 999px; color: var(--muted); font-weight: 700; }
     .nav-links a:hover, .nav-links a.active { background: var(--panel); color: var(--text); box-shadow: var(--shadow); }
-    .hero { display: grid; grid-template-columns: 1.18fr 0.82fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
+    .language-switch { display: flex; justify-content: flex-end; margin: 0 0 18px; }
+    .language-switch a { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 999px; color: var(--accent-strong); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); font-weight: 800; }
+    .language-switch a:hover, .language-switch a:focus { background: var(--accent-soft); outline: none; }
+    .hero { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
     .hero-main, .hero-side { background: rgba(255,255,255,0.92); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); }
     .hero-main { padding: 36px; }
     .hero-side { padding: 28px; display: grid; gap: 18px; align-content: start; }
@@ -74,7 +77,7 @@
     .shot img { width: 100%; border-radius: 18px; display: block; }
     ul { margin: 14px 0 0; padding-left: 18px; }
     .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; display: flex; gap: 16px; flex-wrap: wrap; }
-    @media (max-width: 900px) { .hero, .section-grid, .shots { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
+    @media (max-width: 900px) { .language-switch { justify-content: flex-start; } .hero, .section-grid, .shots { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
   </style>
 </head>
 <body>
@@ -91,6 +94,10 @@
         <a href="https://richcodestudio.com/contact.html">Contact</a>
       </div>
     </nav>
+
+    <div class="language-switch">
+      <a href="es/" aria-label="Ver esta página en español">Ver en español</a>
+    </div>
 
     <section class="hero">
       <div class="hero-main">
@@ -126,10 +133,6 @@
           <div class="card">
             <h3>Why it stands out</h3>
             <p>It is a travel preparation app first: practical phrases, pronunciation, signs, and study paths stay tied to real situations.</p>
-          </div>
-          <div class="card">
-            <h3>Language</h3>
-            <p><a href="es/">Ver en español</a></p>
           </div>
           <div class="card">
             <h3>Legal</h3>
