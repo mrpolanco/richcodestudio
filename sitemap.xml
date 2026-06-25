@@ -86,7 +86,22 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://richcodestudio.com/apps/himnario-celebremos/support-es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://richcodestudio.com/apps/himnario-celebremos-app/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://richcodestudio.com/apps/himnario-celebremos-app/privacy-policy-es/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://richcodestudio.com/apps/himnario-celebremos/privacy-policy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
