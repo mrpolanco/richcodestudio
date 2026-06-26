@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verse of the Day · Bible Widget | Daily Scripture, No Ads</title>
+  <meta name="description" content="Beautiful daily Scripture on your Home Screen and Lock Screen. Verse of the Day is a free bilingual Bible widget with curated passages and no ads." />
+  <link rel="canonical" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/" />
+  <link rel="alternate" hreflang="en" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/" />
+  <link rel="alternate" hreflang="es" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/" />
+  <meta property="og:title" content="Verse of the Day · Bible Widget" />
+  <meta property="og:description" content="Daily Scripture on your Home Screen and Lock Screen, curated by theme, free forever, in English and Spanish." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/" />
+  <meta property="og:image" content="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/assets/en/home.png" />
+  <meta property="og:site_name" content="Rich Code Studio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Verse of the Day · Bible Widget" />
+  <meta name="twitter:description" content="Beautiful daily Scripture widgets, curated by theme, free forever, and bilingual." />
+  <meta name="twitter:image" content="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/assets/en/home.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Verse of the Day · Bible Widget",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS",
+    "description": "Verse of the Day displays one curated Bible passage per day on the Home Screen and Lock Screen, with English and Spanish support.",
+    "image": "https://richcodestudio.com/apps/verse-of-the-day-bible-widget/assets/icon.png",
+    "url": "https://richcodestudio.com/apps/verse-of-the-day-bible-widget/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rich Code Studio",
+      "url": "https://richcodestudio.com/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --panel: #ffffff;
+      --panel-soft: #eef3ea;
+      --text: #1d261d;
+      --muted: #66705f;
+      --line: rgba(71, 93, 64, 0.16);
+      --accent: #6f8f3d;
+      --accent-strong: #4f6e2b;
+      --accent-soft: #f1f7df;
+      --gold: #a97d2d;
+      --shadow: 0 22px 52px rgba(41, 55, 32, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --content: 1160px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--text); background: linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%); }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0 18px; }
+    .brand-title { font-size: 1.1rem; font-weight: 800; }
+    .brand-sub { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 3px; }
+    .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { padding: 10px 16px; border-radius: 999px; color: var(--muted); font-weight: 700; }
+    .nav-links a:hover, .nav-links a.active { background: var(--panel); color: var(--text); box-shadow: var(--shadow); }
+    .language-switch { display: flex; justify-content: flex-end; margin: 0 0 18px; }
+    .language-switch a { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 999px; color: var(--accent-strong); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); font-weight: 800; }
+    .language-switch a:hover, .language-switch a:focus { background: var(--accent-soft); outline: none; }
+    .hero { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
+    .hero-main, .hero-side { background: rgba(255,255,255,0.92); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); }
+    .hero-main { padding: 36px; }
+    .hero-side { padding: 28px; display: grid; gap: 18px; align-content: start; }
+    .eyebrow { display: inline-flex; padding: 9px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.05em; margin: 18px 0; }
+    .lead { color: var(--muted); font-size: 1.16rem; line-height: 1.75; max-width: 62ch; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; padding: 15px 22px; border-radius: 999px; font-weight: 800; }
+    .cta.primary { background: var(--accent); color: white; }
+    .cta.secondary { background: var(--panel); border: 1px solid var(--line); color: var(--text); }
+    .metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 28px; }
+    .metric { padding: 18px; border-radius: var(--radius-lg); background: var(--panel-soft); border: 1px solid var(--line); }
+    .metric strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+    .metric span { color: var(--muted); line-height: 1.55; }
+    .app-chip { display: flex; gap: 12px; align-items: center; padding: 16px; border-radius: var(--radius-lg); background: var(--panel-soft); border: 1px solid var(--line); }
+    .app-chip img { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; flex-shrink: 0; box-shadow: 0 6px 16px rgba(41,55,32,0.18); }
+    .app-chip strong { font-size: 1.15rem; display: block; margin-bottom: 4px; }
+    .app-chip span { color: var(--muted); line-height: 1.5; }
+    .screenshot-panel { display: grid; place-items: center; padding: 12px; border-radius: var(--radius-xl); background: #f4eedf; border: 1px solid rgba(169,125,45,0.18); }
+    .screenshot-panel img { width: min(100%, 340px); height: auto; display: block; border-radius: 28px; box-shadow: var(--shadow); }
+    .stack { display: grid; gap: 14px; }
+    .card { padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--panel); }
+    .card h3 { margin: 0 0 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .section { padding: 22px 0 10px; }
+    .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+    .section-box { background: rgba(255,255,255,0.92); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; box-shadow: var(--shadow); }
+    .section-box h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 0 0 12px; letter-spacing: -0.04em; }
+    .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
+    .shots { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 18px; }
+    .shot { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 12px; box-shadow: var(--shadow); }
+    .shot img { width: 100%; border-radius: 18px; display: block; }
+    ul { margin: 14px 0 0; padding-left: 18px; }
+    .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; display: flex; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 900px) { .language-switch { justify-content: flex-start; } .hero, .section-grid, .shots { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav">
+      <a href="https://richcodestudio.com/" aria-label="Rich Code Studio home">
+        <div class="brand-title">Rich Code Studio</div>
+        <div class="brand-sub">iOS Product Studio</div>
+      </a>
+      <div class="nav-links">
+        <a href="https://richcodestudio.com/">Home</a>
+        <a href="https://richcodestudio.com/about.html">About</a>
+        <a href="https://richcodestudio.com/apps/" class="active">Apps</a>
+        <a href="https://richcodestudio.com/contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <div class="language-switch">
+      <a href="es/" aria-label="Ver esta página en español">Ver en español</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Daily Scripture widget</div>
+        <h1>Keep Scripture on your Home Screen, without ads or noise.</h1>
+        <p class="lead">Verse of the Day · Bible Widget displays one thoughtfully curated Bible passage each day on your Home Screen and Lock Screen. Choose a theme, read the full passage in the app, and keep a simple daily rhythm in English or Spanish.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="support/">Get Support</a>
+          <a class="cta secondary" href="privacy-policy/">Privacy Policy</a>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>58 passages</strong><span>Hand-curated across 8 themes, including peace, prayer, gratitude, wisdom, rest, grace, hope, and trust.</span></div>
+          <div class="metric"><strong>Bilingual</strong><span>Full English and Spanish support, with automatic device-language behavior or manual language choice.</span></div>
+          <div class="metric"><strong>Free forever</strong><span>No account, no ads, no subscriptions, and no in-app purchases. Just Scripture.</span></div>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div class="app-chip">
+          <img src="assets/icon.png" alt="Verse of the Day app icon" />
+          <div>
+            <strong>Verse of the Day</strong>
+            <span>Daily Bible widgets for iPhone Home Screen and Lock Screen.</span>
+          </div>
+        </div>
+        <div class="screenshot-panel">
+          <img src="assets/en/home.png" alt="Verse of the Day home screen" loading="lazy" />
+        </div>
+        <div class="stack">
+          <div class="card">
+            <h3>Best for</h3>
+            <p>People who want Scripture as a quiet daily habit without opening a full Bible app every morning.</p>
+          </div>
+          <div class="card">
+            <h3>Why it stands out</h3>
+            <p>Passages are selected by theme rather than random rotation, so each widget feels intentional and readable.</p>
+          </div>
+          <div class="card">
+            <h3>Legal</h3>
+            <p><a href="privacy-policy/">Privacy Policy</a> · <a href="terms-of-service/">Terms of Service</a></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-box">
+          <h2>Widgets for everyday attention</h2>
+          <p>Add Scripture to your Home Screen or Lock Screen in the size that fits your day. The daily verse appears automatically, and tapping the widget opens the full passage in the app.</p>
+          <ul>
+            <li>Small, medium, and large Home Screen widgets.</li>
+            <li>Lock Screen widgets for quick daily reminders.</li>
+            <li>Deterministic daily rotation so everyone sees the same verse each day.</li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <h2>Curated by spiritual theme</h2>
+          <p>Instead of random verses, the app centers on passages chosen for real seasons of faith: anxiety, hope, gratitude, forgiveness, rest, surrender, and more.</p>
+          <ul>
+            <li>Eight thematic collections with 58 selected passages.</li>
+            <li>Public-domain Bible translations: ASV in English and RV1909 in Spanish.</li>
+            <li>Gracewell links for deeper prayer, Scripture, and reflection.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="shots" aria-label="Verse of the Day screenshots">
+        <div class="shot"><img src="assets/en/widgets.png" alt="Home Screen widget examples" loading="lazy" /></div>
+        <div class="shot"><img src="assets/en/lock-screen.png" alt="Lock Screen widget examples" loading="lazy" /></div>
+        <div class="shot"><img src="assets/en/verse-detail.png" alt="Verse detail screen" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="https://richcodestudio.com/apps/">Back to all apps</a>
+      <a href="support/">Support</a>
+      <a href="privacy-policy/">Privacy Policy</a>
+      <a href="terms-of-service/">Terms of Service</a>
+    </footer>
+  </div>
+</body>
+</html>

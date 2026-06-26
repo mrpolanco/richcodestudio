@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Versículo del Día · Bible Widget | Escritura diaria, sin anuncios</title>
+  <meta name="description" content="Hermosa Escritura diaria en tu pantalla de inicio y pantalla bloqueada. Un widget bíblico gratis, bilingüe y sin anuncios." />
+  <link rel="canonical" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/es/" />
+  <link rel="alternate" hreflang="es" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/es/" />
+  <link rel="alternate" hreflang="en" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/" />
+  <link rel="alternate" hreflang="x-default" href="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/" />
+  <meta property="og:title" content="Versículo del Día · Bible Widget" />
+  <meta property="og:description" content="Escritura diaria en tu pantalla, seleccionada por tema, gratis para siempre, en español e inglés." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/es/" />
+  <meta property="og:image" content="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/assets/es/home.png" />
+  <meta property="og:site_name" content="Rich Code Studio" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Versículo del Día · Bible Widget" />
+  <meta name="twitter:description" content="Widgets de Escritura diaria, seleccionados por tema, gratis para siempre y bilingües." />
+  <meta name="twitter:image" content="https://richcodestudio.com/apps/verse-of-the-day-bible-widget/assets/es/home.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Versículo del Día · Bible Widget",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS",
+    "description": "Versículo del Día muestra un pasaje bíblico seleccionado cada día en la pantalla de inicio y pantalla bloqueada, con soporte en español e inglés.",
+    "image": "https://richcodestudio.com/apps/verse-of-the-day-bible-widget/assets/icon.png",
+    "url": "https://richcodestudio.com/apps/verse-of-the-day-bible-widget/es/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rich Code Studio",
+      "url": "https://richcodestudio.com/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <style>
+    :root { --bg:#f7f5ef; --panel:#ffffff; --panel-soft:#eef3ea; --text:#1d261d; --muted:#66705f; --line:rgba(71,93,64,0.16); --accent:#6f8f3d; --accent-strong:#4f6e2b; --accent-soft:#f1f7df; --gold:#a97d2d; --shadow:0 22px 52px rgba(41,55,32,0.12); --radius-xl:28px; --radius-lg:20px; --content:1160px; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif; color:var(--text); background:linear-gradient(180deg,#fffdf8 0%,var(--bg) 100%); }
+    a { color:inherit; text-decoration:none; }
+    .shell { width:min(calc(100% - 40px),var(--content)); margin:0 auto; }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:22px 0 18px; }
+    .brand-title { font-size:1.1rem; font-weight:800; }
+    .brand-sub { font-size:0.76rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); margin-top:3px; }
+    .nav-links { display:flex; gap:12px; flex-wrap:wrap; }
+    .nav-links a { padding:10px 16px; border-radius:999px; color:var(--muted); font-weight:700; }
+    .nav-links a:hover, .nav-links a.active { background:var(--panel); color:var(--text); box-shadow:var(--shadow); }
+    .language-switch { display:flex; justify-content:flex-end; margin:0 0 18px; }
+    .language-switch a { display:inline-flex; align-items:center; justify-content:center; padding:10px 16px; border-radius:999px; color:var(--accent-strong); background:var(--panel); border:1px solid var(--line); box-shadow:var(--shadow); font-weight:800; }
+    .language-switch a:hover, .language-switch a:focus { background:var(--accent-soft); outline:none; }
+    .hero { display:grid; grid-template-columns:1.35fr 0.85fr; gap:24px; align-items:stretch; padding-bottom:24px; }
+    .hero-main, .hero-side { background:rgba(255,255,255,0.92); border:1px solid var(--line); border-radius:var(--radius-xl); box-shadow:var(--shadow); }
+    .hero-main { padding:36px; }
+    .hero-side { padding:28px; display:grid; gap:18px; align-content:start; }
+    .eyebrow { display:inline-flex; padding:9px 14px; border-radius:999px; background:var(--accent-soft); color:var(--accent-strong); font-weight:800; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; }
+    .hero h1 { font-size:clamp(2.8rem,6vw,5rem); line-height:0.95; letter-spacing:-0.05em; margin:18px 0; }
+    .lead { color:var(--muted); font-size:1.16rem; line-height:1.75; max-width:62ch; }
+    .cta-row { display:flex; gap:14px; flex-wrap:wrap; margin-top:28px; }
+    .cta { display:inline-flex; align-items:center; justify-content:center; padding:15px 22px; border-radius:999px; font-weight:800; }
+    .cta.primary { background:var(--accent); color:white; }
+    .cta.secondary { background:var(--panel); border:1px solid var(--line); color:var(--text); }
+    .metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:28px; }
+    .metric { padding:18px; border-radius:var(--radius-lg); background:var(--panel-soft); border:1px solid var(--line); }
+    .metric strong { display:block; font-size:1.05rem; margin-bottom:6px; }
+    .metric span { color:var(--muted); line-height:1.55; }
+    .app-chip { display:flex; gap:12px; align-items:center; padding:16px; border-radius:var(--radius-lg); background:var(--panel-soft); border:1px solid var(--line); }
+    .app-chip img { width:44px; height:44px; border-radius:10px; object-fit:cover; flex-shrink:0; box-shadow:0 6px 16px rgba(41,55,32,0.18); }
+    .app-chip strong { font-size:1.15rem; display:block; margin-bottom:4px; }
+    .app-chip span { color:var(--muted); line-height:1.5; }
+    .screenshot-panel { display:grid; place-items:center; padding:12px; border-radius:var(--radius-xl); background:#f4eedf; border:1px solid rgba(169,125,45,0.18); }
+    .screenshot-panel img { width:min(100%,340px); height:auto; display:block; border-radius:28px; box-shadow:var(--shadow); }
+    .stack { display:grid; gap:14px; }
+    .card { padding:20px; border-radius:var(--radius-lg); border:1px solid var(--line); background:var(--panel); }
+    .card h3 { margin:0 0 8px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); }
+    .card p { margin:0; color:var(--muted); line-height:1.65; }
+    .section { padding:22px 0 10px; }
+    .section-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+    .section-box { background:rgba(255,255,255,0.92); border:1px solid var(--line); border-radius:var(--radius-xl); padding:30px; box-shadow:var(--shadow); }
+    .section-box h2 { font-size:clamp(1.8rem,3.5vw,2.4rem); margin:0 0 12px; letter-spacing:-0.04em; }
+    .section-box p, .section-box li { color:var(--muted); line-height:1.72; font-size:1rem; }
+    .shots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:18px; }
+    .shot { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-lg); padding:12px; box-shadow:var(--shadow); }
+    .shot img { width:100%; border-radius:18px; display:block; }
+    ul { margin:14px 0 0; padding-left:18px; }
+    .footer { padding:40px 0 60px; color:var(--muted); font-size:0.95rem; display:flex; gap:16px; flex-wrap:wrap; }
+    @media (max-width:900px) { .language-switch { justify-content:flex-start; } .hero, .section-grid, .shots { grid-template-columns:1fr; } .metrics { grid-template-columns:1fr; } .hero-main, .hero-side { padding:24px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav">
+      <a href="https://richcodestudio.com/" aria-label="Inicio de Rich Code Studio">
+        <div class="brand-title">Rich Code Studio</div>
+        <div class="brand-sub">Estudio de productos iOS</div>
+      </a>
+      <div class="nav-links">
+        <a href="https://richcodestudio.com/">Inicio</a>
+        <a href="https://richcodestudio.com/about.html">Acerca de</a>
+        <a href="https://richcodestudio.com/apps/" class="active">Apps</a>
+        <a href="https://richcodestudio.com/contact.html">Contacto</a>
+      </div>
+    </nav>
+
+    <div class="language-switch">
+      <a href="../" aria-label="View this page in English">View in English</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Widget de Escritura diaria</div>
+        <h1>Mantén la Escritura en tu pantalla, sin anuncios ni ruido.</h1>
+        <p class="lead">Versículo del Día · Bible Widget muestra un pasaje bíblico cuidadosamente seleccionado cada día en tu pantalla de inicio y pantalla bloqueada. Elige un tema, lee el pasaje completo en la app y conserva un ritmo diario sencillo en español o inglés.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="../support/es/">Soporte</a>
+          <a class="cta secondary" href="../privacy-policy/es/">Política de privacidad</a>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>58 pasajes</strong><span>Seleccionados a mano en 8 temas, incluyendo paz, oración, gratitud, sabiduría, descanso, gracia, esperanza y confianza.</span></div>
+          <div class="metric"><strong>Bilingüe</strong><span>Soporte completo en español e inglés, con idioma automático según tu dispositivo o selección manual.</span></div>
+          <div class="metric"><strong>Gratis siempre</strong><span>Sin cuenta, sin anuncios, sin suscripciones y sin compras dentro de la app. Solo Escritura.</span></div>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div class="app-chip">
+          <img src="../assets/icon.png" alt="Icono de Versículo del Día" />
+          <div>
+            <strong>Versículo del Día</strong>
+            <span>Widgets bíblicos diarios para pantalla de inicio y pantalla bloqueada.</span>
+          </div>
+        </div>
+        <div class="screenshot-panel">
+          <img src="../assets/es/home.png" alt="Pantalla principal de Versículo del Día" loading="lazy" />
+        </div>
+        <div class="stack">
+          <div class="card">
+            <h3>Ideal para</h3>
+            <p>Personas que quieren la Escritura como un hábito diario tranquilo, sin tener que abrir una app bíblica completa cada mañana.</p>
+          </div>
+          <div class="card">
+            <h3>Por qué destaca</h3>
+            <p>Los pasajes se eligen por tema en vez de rotar al azar, para que cada widget se sienta intencional y fácil de leer.</p>
+          </div>
+          <div class="card">
+            <h3>Legal</h3>
+            <p><a href="../privacy-policy/es/">Política de privacidad</a> · <a href="../terms-of-service/es/">Términos de servicio</a></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-box">
+          <h2>Widgets para la atención diaria</h2>
+          <p>Agrega la Escritura a tu pantalla de inicio o pantalla bloqueada en el tamaño que encaje con tu día. El versículo diario aparece automáticamente, y al tocar el widget se abre el pasaje completo en la app.</p>
+          <ul>
+            <li>Widgets pequeños, medianos y grandes para pantalla de inicio.</li>
+            <li>Widgets de pantalla bloqueada para recordatorios diarios rápidos.</li>
+            <li>Rotación diaria determinista para que todos vean el mismo versículo cada día.</li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <h2>Seleccionado por tema espiritual</h2>
+          <p>En lugar de versículos al azar, la app se centra en pasajes elegidos para temporadas reales de fe: ansiedad, esperanza, gratitud, perdón, descanso, rendición y más.</p>
+          <ul>
+            <li>Ocho colecciones temáticas con 58 pasajes seleccionados.</li>
+            <li>Traducciones bíblicas de dominio público: ASV en inglés y RV1909 en español.</li>
+            <li>Enlaces a Gracewell para profundizar en oración, Escritura y reflexión.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="shots" aria-label="Capturas de Versículo del Día">
+        <div class="shot"><img src="../assets/es/widgets.png" alt="Ejemplos de widgets de pantalla de inicio" loading="lazy" /></div>
+        <div class="shot"><img src="../assets/es/lock-screen.png" alt="Ejemplos de widgets de pantalla bloqueada" loading="lazy" /></div>
+        <div class="shot"><img src="../assets/es/verse-detail.png" alt="Pantalla de detalle del versículo" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="https://richcodestudio.com/apps/">Volver a todas las apps</a>
+      <a href="../support/es/">Soporte</a>
+      <a href="../privacy-policy/es/">Política de privacidad</a>
+      <a href="../terms-of-service/es/">Términos de servicio</a>
+    </footer>
+  </div>
+</body>
+</html>
